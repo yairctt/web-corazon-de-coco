@@ -226,32 +226,42 @@
         },
         {
             "nombre": "Cupcakes Clásicos",
-            "imagen": "images/cupcake2.png",
+            "imagen": "images/cupcakes1.png",
             "descripcion": "Esponjosos cupcakes con betún suave.<br>Perfectos para cualquier ocasión."
+        },
+        {
+            "nombre": "Cupcakes con Fresas",
+            "imagen": "images/fresas_choco.png",
+            "descripcion": "Esponjosos cupcakes con betún suave.<br>Con fresas de chocolate."
         }
     ],
     "Postres Individuales": [
         {
-            "nombre": "Flan Napolitano",
-            "imagen": "images/postre1.png",
-            "descripcion": "Delicioso flan casero con caramelo artesanal.<br>Presentación individual."
+            "nombre": "Chocoflan Individual",
+            "imagen": "images/chocofl.png",
+            "descripcion": "Delicioso Chocoflan casero artesanal.<br>Presentación individual."
         },
         {
-            "nombre": "Tres Leches Individual",
-            "imagen": "images/postre2.png",
-            "descripcion": "Clásico pastel tres leches en porción personal.<br>Suave y delicioso."
+            "nombre": "Cheesecake de oreo Individual",
+            "imagen": "images/postre.png",
+            "descripcion": "Clásico cheesecake de oreo en porción personal.<br>Suave y delicioso."
+        },
+        {
+            "nombre": "Cheesecake de Queso Individual",
+            "imagen": "images/pan_postre.png",
+            "descripcion": "Clásico cheesecake de queso en porción personal.<br>Suave y delicioso."
+        },
+        {
+            "nombre": "Flan Napolitano Individual",
+            "imagen": "images/glaseado.png",
+            "descripcion": "Clásico flan napolitano en porción personal.<br>Suave y delicioso."
         }
     ],
-    "Galletas Decoradas": [
+    "Fresas": [
         {
-            "nombre": "Galletas Temáticas",
-            "imagen": "images/galleta1.png",
-            "descripcion": "Galletas personalizadas con glaseado real.<br>Diseños únicos para cada ocasión."
-        },
-        {
-            "nombre": "Galletas Navideñas",
-            "imagen": "images/galleta2.png",
-            "descripcion": "Set de galletas con diseños navideños.<br>Perfectas para regalar."
+            "nombre": "Fresas con chocolate",
+            "imagen": "images/fresas_rosas.png",
+            "descripcion": "Dieciseis fresas cubiertas de chocolate blanco con brillo comestible."
         }
     ]
 }
