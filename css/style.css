@@ -2121,4 +2121,9 @@ a:focus {
   }
 }
 
+body.page-locked {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
 /*# sourceMappingURL=style.css.map */

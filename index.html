@@ -678,7 +678,7 @@
 <script>
   // Fecha del cumpleaños: 18 de diciembre de 2025 a las 00:00:00
   const birthdayDate = new Date('December 18, 2025 00:00:00').getTime();
-
+  document.body.classList.add('page-locked');
   function updatePageLock() {
     const now = new Date().getTime();
     const distance = birthdayDate - now;
@@ -687,6 +687,7 @@
 
     if (distance < 0) {
       // ¡Desbloquear la página!
+      document.body.classList.remove('page-locked');
       if (pageLock) {
         pageLock.classList.add('hidden');
         setTimeout(() => {
