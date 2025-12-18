@@ -199,6 +199,11 @@
             "nombre": "Pastel de Cumpleaños",
             "imagen": "images/pastel_bllanco_cumple.png",
             "descripcion": "Bizcocho de vainilla remojado en tres leches con relleno de chocolate."
+        },
+        {
+            "nombre": "Monstruo Come Galletas",
+            "imagen": "images/pastel_mostro_come_galletas.png",
+            "descripcion": "Bizcocho de vainilla remojado en tres leches con relleno de chocolate."
         }
     ],
     "Mesas de Postres": [

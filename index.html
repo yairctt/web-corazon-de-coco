@@ -33,6 +33,33 @@
 </head>
 
 <body>
+  <div id="pageLock" class="page-lock-overlay">
+    <div class="lock-content">
+      <div class="lock-emoji">🎁🔒✨</div>
+      <h1 class="lock-title">¡Casi es hora!</h1>
+      <p class="lock-message">
+        Esta página se desbloqueará a medianoche<br>
+        para revelar una sorpresa especial...
+      </p>
+
+      <div class="lock-countdown">
+        <div class="lock-time-unit">
+          <span class="lock-time-number" id="lockHours">00</span>
+          <span class="lock-time-label">Horas</span>
+        </div>
+        <div class="lock-time-unit">
+          <span class="lock-time-number" id="lockMinutes">00</span>
+          <span class="lock-time-label">Minutos</span>
+        </div>
+        <div class="lock-time-unit">
+          <span class="lock-time-number" id="lockSeconds">00</span>
+          <span class="lock-time-label">Segundos</span>
+        </div>
+      </div>
+
+      <p class="lock-hint">💝 Prepárate 💝</p>
+    </div>
+  </div>
 
   <div class="hero_area">
 
@@ -646,6 +673,44 @@
       }
     });
   });
+</script>
+
+<script>
+  // Fecha del cumpleaños: 18 de diciembre de 2025 a las 00:00:00
+  const birthdayDate = new Date('December 18, 2025 00:00:00').getTime();
+
+  function updatePageLock() {
+    const now = new Date().getTime();
+    const distance = birthdayDate - now;
+
+    const pageLock = document.getElementById('pageLock');
+
+    if (distance < 0) {
+      // ¡Desbloquear la página!
+      if (pageLock) {
+        pageLock.classList.add('hidden');
+        setTimeout(() => {
+          pageLock.style.display = 'none';
+        }, 500);
+      }
+      return;
+    }
+
+    // Actualizar contador de bloqueo
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    if (document.getElementById('lockHours')) {
+      document.getElementById('lockHours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('lockMinutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('lockSeconds').textContent = String(seconds).padStart(2, '0');
+    }
+  }
+
+  // Actualizar cada segundo
+  updatePageLock();
+  setInterval(updatePageLock, 1000);
 </script>
 
 </html>

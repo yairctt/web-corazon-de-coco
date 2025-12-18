@@ -1995,4 +1995,130 @@ a:focus {
   }
 }
 
+/* Pantalla de bloqueo */
+.page-lock-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #fa7d09 0%, #2f2519 100%);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.page-lock-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lock-content {
+  text-align: center;
+  color: white;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+}
+
+.lock-emoji {
+  font-size: 4em;
+  margin-bottom: 20px;
+  animation: lockBounce 2s infinite;
+}
+
+@keyframes lockBounce {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-15px) rotate(-5deg);
+  }
+
+  75% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+}
+
+.lock-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.lock-message {
+  font-size: 1.3em;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+.lock-countdown {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.lock-time-unit {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px 20px;
+  border-radius: 12px;
+  min-width: 80px;
+  backdrop-filter: blur(5px);
+}
+
+.lock-time-number {
+  display: block;
+  font-size: 2.5em;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.lock-time-label {
+  display: block;
+  font-size: 0.8em;
+  margin-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.lock-hint {
+  margin-top: 25px;
+  font-size: 1em;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .lock-title {
+    font-size: 2em;
+  }
+
+  .lock-message {
+    font-size: 1.1em;
+  }
+
+  .lock-time-unit {
+    min-width: 65px;
+    padding: 12px 15px;
+  }
+
+  .lock-time-number {
+    font-size: 2em;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

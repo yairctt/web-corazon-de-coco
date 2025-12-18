@@ -166,33 +166,6 @@
 
     <!-- Mensaje especial temporal -->
     <div class="container">
-      <div class="countdown-wrapper">
-        <div class="countdown-emoji">🎂✨🎉</div>
-        <h3 class="countdown-title">Faltan solo...</h3>
-
-        <div id="countdownDisplay" class="countdown-display">
-          <div class="countdown-unit">
-            <span class="countdown-number" id="days">00</span>
-            <span class="countdown-label">Días</span>
-          </div>
-          <div class="countdown-unit">
-            <span class="countdown-number" id="hours">00</span>
-            <span class="countdown-label">Horas</span>
-          </div>
-          <div class="countdown-unit">
-            <span class="countdown-number" id="minutes">00</span>
-            <span class="countdown-label">Minutos</span>
-          </div>
-          <div class="countdown-unit">
-            <span class="countdown-number" id="seconds">00</span>
-            <span class="countdown-label">Segundos</span>
-          </div>
-        </div>
-
-        <div id="celebrationText" class="celebration-active">
-          🎊 ¡ES HOY! ¡FELIZ CUMPLEAÑOS! 🎊
-        </div>
-      </div>
       <div class="birthday-message">
         <div class="birthday-content">
           <div class="birthday-icon">🎂✨🎉</div>
@@ -309,50 +282,5 @@
   <!-- End Google Map -->
 
 </body>
-
-<script>
-  // Fecha del cumpleaños: 18 de diciembre de 2025 a las 00:00:00
-  const birthdayDate = new Date('December 18, 2025 00:00:00').getTime();
-
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = birthdayDate - now;
-
-    // Obtener el mensaje de cumpleaños (el que ya tienes en tu página)
-    const birthdayMessage = document.querySelector('.birthday-message');
-
-    if (distance < 0) {
-      // ¡Es el cumpleaños!
-      document.getElementById('countdownDisplay').style.display = 'none';
-      document.getElementById('celebrationText').classList.add('show');
-      document.querySelector('.countdown-title').textContent = '¡Llegó el gran día!';
-
-      // Mostrar el mensaje de cumpleaños que ya tenías
-      if (birthdayMessage) {
-        birthdayMessage.style.display = 'block';
-      }
-      return;
-    }
-
-    // Antes de medianoche, ocultar el mensaje
-    if (birthdayMessage) {
-      birthdayMessage.style.display = 'none';
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById('days').textContent = String(days).padStart(2, '0');
-    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-  }
-
-  // Actualizar cada segundo
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-</script>
 
 </html>
