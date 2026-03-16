@@ -290,313 +290,411 @@
 
   <!-- product section -->
 
-  <<section class="product_section layout_padding">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>Nuestros Productos de Temporada Navideña</h2>
+  <section class="product_section featured-section">
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="heading_container heading_center mb-5">
+        <h2 class="featured-title">Nuestros Favoritos</h2>
+        <p style="color: #555; font-size: 1.1rem; font-style: italic; margin-top: 10px;">¡Descubre los postres que
+          enamoran a todos nuestros clientes!</p>
       </div>
 
       <div class="row">
 
-        <!-- Producto -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box product-box" style="cursor:pointer;" onclick="abrirModal(
-            'Reno',
-            'images/reno.png',
-            'Sabor bizcocho: Chocolate, Red Velvet y Vainilla. Relleno: Cajeta, Chocolate, Avellanas y fresas con crema.',
-            '$170'
+        <!-- Producto 1 -->
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="box product-box elegant-card" style="cursor:pointer;" onclick="abrirModal(
+            'Pasteles personalizados',
+            'images/pastel_stich.png',
+            'Diseñamos tu pastel a tu gusto. Elige sabor, relleno, colores y temática para crear un pastel único para tu evento.'
           )">
             <div class="img-box">
-              <img src="images/reno.png" alt="Reno">
+              <img src="images/pastel_stich.png" alt="Pasteles personalizados">
             </div>
             <div class="detail-box text-center">
-              <h6>Reno</h6>
-              <h6 class="product-price">$170</h6>
+              <h6 class="featured-name">Pasteles personalizados</h6>
+              <h6 class="featured-price">Cotizar</h6>
             </div>
           </div>
         </div>
 
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box product-box" style="cursor:pointer;" onclick="abrirModal(
-            'Santa Claus',
-            'images/santa.png',
-            'Sabor bizcocho: Chocolate, Red Velvet y Vainilla. Relleno: Cajeta, Chocolate, Avellanas y fresas con crema.',
-            '$170'
+        <!-- Producto 2 -->
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="box product-box elegant-card" style="cursor:pointer;" onclick="abrirModal(
+            'Cupcakes personalizados',
+            'images/cupcakes_happy.png',
+            'Cupcakes decorados a tu gusto. Elige sabores, colores y temática para complementar tu evento con un toque dulce y especial.'
           )">
             <div class="img-box">
-              <img src="images/santa.png" alt="Santa Claus">
+              <img src="images/cupcakes_happy.png" alt="Cupcakes personalizados">
             </div>
             <div class="detail-box text-center">
-              <h6>Santa Claus</h6>
-              <h6 class="product-price">$170</h6>
+              <h6 class="featured-name">Cupcakes personalizados</h6>
+              <h6 class="featured-price">Cotizar</h6>
             </div>
           </div>
         </div>
 
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box product-box" style="cursor:pointer;" onclick="abrirModal(
-            'Corona Navideña',
-            'images/pastel_navidad.png',
-            'Sabor bizcocho: Chocolate, Red Velvet y Vainilla. Relleno: Cajeta, Chocolate, Avellanas y fresas con crema.',
-            '$180'
+        <!-- Producto 3 -->
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="box product-box elegant-card" style="cursor:pointer;" onclick="abrirModal(
+            'Paostres enteros',
+            'images/postres_enteros.png',
+            'Deliciosos postres enteros ideales para compartir. Preparados de forma artesanal con sabores que encantan.',
+            'Cotizar'
           )">
             <div class="img-box">
-              <img src="images/pastel_navidad.png" alt="Corona Navideña">
+              <img src="images/postres_enteros.png" alt="Postres enteros">
             </div>
             <div class="detail-box text-center">
-              <h6>Corona Navideña</h6>
-              <h6 class="product-price">$180</h6>
+              <h6 class="featured-name">Postres enteros</h6>
+              <h6 class="featured-price">Cotizar</h6>
             </div>
           </div>
         </div>
 
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box product-box" style="cursor:pointer;" onclick="abrirModal(
-            'Corona Especial',
-            'images/pastel_corona.png',
-            'Sabor bizcocho: Chocolate, Red Velvet y Vainilla. Relleno: Cajeta, Chocolate, Avellanas y fresas con crema.',
-            '$180'
+        <!-- Producto 4 -->
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="box product-box elegant-card" style="cursor:pointer;" onclick="abrirModal(
+            'Mesa de Dulces',
+            'images/mesa_postres_fav.png',
+            'Mesa de postres personalizada según tu evento, con variedad de postres y decoración a tu elección.',
+            'Cotizar'
           )">
             <div class="img-box">
-              <img src="images/pastel_corona.png" alt="Corona Especial">
+              <img src="images/mesa_postres_fav.png" alt="Mesa de Postres">
             </div>
             <div class="detail-box text-center">
-              <h6>Corona Especial</h6>
-              <h6 class="product-price">$180</h6>
+              <h6 class="featured-name">Mesas de Postres</h6>
+              <h6 class="featured-price">Cotizar</h6>
             </div>
           </div>
         </div>
 
       </div>
     </div>
-    </section>
+  </section>
 
-    <!-- end product section -->
+  <!-- end product section -->
 
-    <!-- Modal para vista grande del producto -->
-    <div id="modalProducto" class="modal-producto">
-      <div class="modal-contenido">
-        <span class="modal-cerrar">&times;</span>
-        <div class="modal-body">
-          <div class="modal-imagen">
-            <img id="modalImagen" src="" alt="">
+  <!-- flavors/menu section -->
+  <section class="menu_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center mb-5">
+        <h2>
+          Menú <span>de Pasteles</span>
+        </h2>
+      </div>
+
+      <!-- Tamaños -->
+      <div class="menu_block">
+        <div class="menu_subtitle_container">
+          <div class="menu_divider"></div>
+          <h3 class="menu_subtitle">Tamaños</h3>
+          <div class="menu_divider"></div>
+        </div>
+
+        <div class="menu_sizes_grid">
+          <div class="menu_size_item">
+            <span class="menu_size_name">Individual</span>
+            <span class="menu_size_desc">Para 1 persona</span>
           </div>
-          <div class="modal-info">
-            <h2 id="modalNombre"></h2>
-            <p id="modalDescripcion"></p>
-            <div class="modal-acciones">
-              <a href="https://wa.me/5212881409816?text=Hola!%20Me%20gustaría%20cotizar%20un%20producto" target="_blank"
-                class="btn-whatsapp">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                  <path
-                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
-                </svg>
-                Pedir por WhatsApp
-              </a>
-              <button class="btn-cerrar-modal">Cerrar</button>
-            </div>
+          <div class="menu_size_item">
+            <span class="menu_size_name">Mediano</span>
+            <span class="menu_size_desc">Para 15 personas</span>
+          </div>
+          <div class="menu_size_item">
+            <span class="menu_size_name">Extra</span>
+            <span class="menu_size_desc">Para 30 personas</span>
+          </div>
+          <div class="menu_size_item">
+            <span class="menu_size_name">Chico</span>
+            <span class="menu_size_desc">Para 8 personas</span>
+          </div>
+          <div class="menu_size_item">
+            <span class="menu_size_name">Grande</span>
+            <span class="menu_size_desc">Para 20 personas</span>
+          </div>
+          <div class="menu_size_item">
+            <span class="menu_size_name">Fiesta</span>
+            <span class="menu_size_desc">Para 40+ personas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sabores -->
+      <div class="menu_block">
+        <div class="menu_subtitle_container">
+          <div class="menu_divider"></div>
+          <h3 class="menu_subtitle">Sabores</h3>
+          <div class="menu_divider"></div>
+        </div>
+
+        <div class="menu_flavors_grid">
+          <ul class="menu_list">
+            <li>Red velvet</li>
+            <li>Zanahoria</li>
+          </ul>
+          <ul class="menu_list">
+            <li>Vainilla</li>
+            <li>Chocolate</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Rellenos -->
+      <div class="menu_block">
+        <div class="menu_subtitle_container">
+          <div class="menu_divider"></div>
+          <h3 class="menu_subtitle">Rellenos</h3>
+          <div class="menu_divider"></div>
+        </div>
+
+        <div class="menu_flavors_grid">
+          <ul class="menu_list">
+            <li>Crema de avellanas</li>
+            <li>Chocolate</li>
+            <li>Queso crema</li>
+            <li>Cajeta</li>
+            <li>Cookies&cream</li>
+          </ul>
+          <ul class="menu_list">
+            <li>Fresas con crema</li>
+            <li>Zarzamora</li>
+            <li>Cafe</li>
+            <li>Coco con piña</li>
+            <li>Nuez</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- end flavors/menu section -->
+
+  <!-- Modal para vista grande del producto -->
+  <div id="modalProducto" class="modal-producto">
+    <div class="modal-contenido">
+      <span class="modal-cerrar">&times;</span>
+      <div class="modal-body">
+        <div class="modal-imagen">
+          <img id="modalImagen" src="" alt="">
+        </div>
+        <div class="modal-info">
+          <h2 id="modalNombre"></h2>
+          <p id="modalDescripcion"></p>
+          <div class="modal-acciones">
+            <a href="https://wa.me/5212881409816?text=Hola!%20Me%20gustaría%20cotizar%20un%20producto" target="_blank"
+              class="btn-whatsapp">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+              </svg>
+              Pedir por WhatsApp
+            </a>
+            <button class="btn-cerrar-modal">Cerrar</button>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- client section -->
+  <!-- client section -->
 
-    <section class="client_section layout_padding">
-      <div class="container">
-        <div class="heading_container heading_center psudo_white_primary mb_45">
-          <h2>
-            ¿Cómo trabajamos?
-          </h2>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-3">
-            <div class="box text-center">
-              <div class="img-box">
-                <div class="step-number">1</div>
-                <i class="fa fa-comments step-icon"></i>
-              </div>
-              <div class="detail-box">
-                <h5>Envíanos tu idea</h5>
-                <p>
-                  Contáctanos por WhatsApp, Facebook o Instagram y cuéntanos qué tipo de creación dulce necesitas.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="box text-center">
-              <div class="img-box">
-                <div class="step-number">2</div>
-                <i class="fa fa-calculator step-icon"></i>
-              </div>
-              <div class="detail-box">
-                <h5>Cotizamos</h5>
-                <p>
-                  Te enviamos una cotización personalizada según tus necesidades y presupuesto.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="box text-center">
-              <div class="img-box">
-                <div class="step-number">3</div>
-                <i class="fa fa-paint-brush step-icon"></i>
-              </div>
-              <div class="detail-box">
-                <h5>Diseñamos</h5>
-                <p>
-                  Creamos tu pedido con amor y dedicación, cuidando cada detalle para que sea justo lo que imaginaste.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="box text-center">
-              <div class="img-box">
-                <div class="step-number">4</div>
-                <i class="fa fa-birthday-cake step-icon"></i>
-              </div>
-              <div class="detail-box">
-                <h5>Entregamos tu pedido</h5>
-                <p>
-                  Recibe tu pedido en la fecha acordada, listo para endulzar tu momento especial
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+  <section class="client_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center psudo_white_primary mb_45">
+        <h2>
+          ¿Cómo trabajamos?
+        </h2>
       </div>
-    </section>
-
-    <!-- end client section -->
-
-    <!-- order section -->
-    <section class="contact_section layout_padding-bottom">
-      <div class="container">
-        <div class="heading_container heading_center">
-          <h2>
-            Contáctanos para tu pedido
-          </h2>
-          <p>
-            Escríbenos para cotizar tu pastel personalizado o cualquiera de nuestros servicios.
-          </p>
-        </div>
-        <div class="row">
-          <div class="col-md-8 mx-auto">
-            <div class="social-buttons">
-              <a href="https://wa.me/5212881409816?text=Hola!%20Me%20gustaría%20cotizar%20un%20producto" target="_blank"
-                class="social-btn whatsapp-btn">
-                <i class="fa fa-whatsapp"></i>
-                WhatsApp
-              </a>
-              <a href="https://www.facebook.com/profile.php?id=61573250580017" target="_blank"
-                class="social-btn facebook-btn">
-                <i class="fa fa-facebook"></i>
-                Facebook
-              </a>
-              <a href="https://www.instagram.com/corazon_de_cooco?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                target="_blank" class="social-btn instagram-btn">
-                <i class="fa fa-instagram"></i>
-                Instagram
-              </a>
-              <a href="mailto:aurachavezfri@gmail.com" class="social-btn email-btn">
-                <i class="fa fa-envelope"></i>
-                Email
-              </a>
+      <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <div class="box text-center">
+            <div class="img-box">
+              <div class="step-number">1</div>
+              <i class="fa fa-comments step-icon"></i>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end contact section -->
-
-    <!-- footer section -->
-    <footer class="footer_section">
-      <div class="container">
-        <div class="row justify-content-center">
-
-          <div class="col-md-4 footer-col">
-            <div class="footer_contact">
-              <h4>
-                Contáctanos en..
-              </h4>
-              <div class="contact_link_box">
-                <a href="">
-                  <i class="fa fa-map-marker" aria-hidden="true"></i>
-                  <span>
-                    Ubicación - Cosamalaopan, Veracruz.
-                  </span>
-                </a>
-                <a href="">
-                  <i class="fa fa-phone" aria-hidden="true"></i>
-                  <span>
-                    Llámanos: +52 2881409816
-                  </span>
-                </a>
-                <a href="">
-                  <i class="fa fa-envelope" aria-hidden="true"></i>
-                  <span>
-                    aurachavezfri@gmail.com
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 footer-col">
-            <div class="footer_detail">
-              <a href="" class="footer-logo">
-                Corazón de Coco
-              </a>
+            <div class="detail-box">
+              <h5>Envíanos tu idea</h5>
               <p>
-                Pasteles y postres artesanales hechos con amor.
+                Contáctanos por WhatsApp, Facebook o Instagram y cuéntanos qué tipo de creación dulce necesitas.
               </p>
-              <div class="footer_social">
-                <a href="https://www.facebook.com/profile.php?id=61573250580017">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a
-                  href="https://api.whatsapp.com/send?phone=%2B5212881409816&fbclid=IwY2xjawOnPWVleHRuA2FlbQIxMABicmlkETFZY3lIUlRxS1hMeGdXWU5Ec3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHssEtixjd5iVAWxxys-EcsESbyMvWX2rii_MtvKInAvLHo_wCsoxJeN8HjtS_aem_uVgq52IVgVE_6I8hSvAmIg">
-                  <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                </a>
-                <a
-                  href="https://www.instagram.com/corazon_de_cooco?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-              </div>
             </div>
           </div>
-
         </div>
-
-        <div class="footer-info">
-          <p>
-            &copy; <span id="displayYear"></span> Todos los derechos reservados
-          </p>
+        <div class="col-md-6 col-lg-3">
+          <div class="box text-center">
+            <div class="img-box">
+              <div class="step-number">2</div>
+              <i class="fa fa-calculator step-icon"></i>
+            </div>
+            <div class="detail-box">
+              <h5>Cotizamos</h5>
+              <p>
+                Te enviamos una cotización personalizada según tus necesidades y presupuesto.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="box text-center">
+            <div class="img-box">
+              <div class="step-number">3</div>
+              <i class="fa fa-paint-brush step-icon"></i>
+            </div>
+            <div class="detail-box">
+              <h5>Diseñamos</h5>
+              <p>
+                Creamos tu pedido con amor y dedicación, cuidando cada detalle para que sea justo lo que imaginaste.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="box text-center">
+            <div class="img-box">
+              <div class="step-number">4</div>
+              <i class="fa fa-birthday-cake step-icon"></i>
+            </div>
+            <div class="detail-box">
+              <h5>Entregamos tu pedido</h5>
+              <p>
+                Recibe tu pedido en la fecha acordada, listo para endulzar tu momento especial
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
-    <!-- footer section -->
+    </div>
+  </section>
 
-    <!-- jQery -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <!-- popper js -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-      </script>
-    <!-- bootstrap js -->
-    <script src="js/bootstrap.js"></script>
-    <!-- owl slider -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  <!-- end client section -->
+
+  <!-- order section -->
+  <section class="contact_section layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Contáctanos para tu pedido
+        </h2>
+        <p>
+          Escríbenos para cotizar tu pastel personalizado o cualquiera de nuestros servicios.
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="social-buttons">
+            <a href="https://wa.me/5212881409816?text=Hola!%20Me%20gustaría%20cotizar%20un%20producto" target="_blank"
+              class="social-btn whatsapp-btn">
+              <i class="fa fa-whatsapp"></i>
+              WhatsApp
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61573250580017" target="_blank"
+              class="social-btn facebook-btn">
+              <i class="fa fa-facebook"></i>
+              Facebook
+            </a>
+            <a href="https://www.instagram.com/corazon_de_cooco?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank" class="social-btn instagram-btn">
+              <i class="fa fa-instagram"></i>
+              Instagram
+            </a>
+            <a href="mailto:aurachavezfri@gmail.com" class="social-btn email-btn">
+              <i class="fa fa-envelope"></i>
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="col-md-4 footer-col">
+          <div class="footer_contact">
+            <h4>
+              Contáctanos en..
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Ubicación - Cosamalaopan, Veracruz.
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Llámanos: +52 2881409816
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  aurachavezfri@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 footer-col">
+          <div class="footer_detail">
+            <a href="" class="footer-logo">
+              Corazón de Coco
+            </a>
+            <p>
+              Pasteles y postres artesanales hechos con amor.
+            </p>
+            <div class="footer_social">
+              <a href="https://www.facebook.com/profile.php?id=61573250580017">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://api.whatsapp.com/send?phone=%2B5212881409816&fbclid=IwY2xjawOnPWVleHRuA2FlbQIxMABicmlkETFZY3lIUlRxS1hMeGdXWU5Ec3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHssEtixjd5iVAWxxys-EcsESbyMvWX2rii_MtvKInAvLHo_wCsoxJeN8HjtS_aem_uVgq52IVgVE_6I8hSvAmIg">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/corazon_de_cooco?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-info">
+        <p>
+          &copy; <span id="displayYear"></span> Todos los derechos reservados
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
-    <!-- custom js -->
-    <script src="js/custom.js"></script>
-    <!-- Google Map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCT1rGXvb_52sjtfFQNidkXbXnLQcSYRlI&callback=myMap">
-    </script>
-    <!-- End Google Map -->
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCT1rGXvb_52sjtfFQNidkXbXnLQcSYRlI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
 
 </body>
 
