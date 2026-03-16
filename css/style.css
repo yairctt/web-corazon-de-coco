@@ -2415,4 +2415,58 @@ body.page-locked {
   }
 }
 
+/* ===================================
+   CORRECCIÓN DEL CARRUSEL EN MÓVILES (ALTURA UNIFORME)
+   =================================== */
+@media (max-width: 768px) {
+  .slider_section .carousel-inner {
+    min-height: 550px;
+  }
+  
+  .slider_section .carousel-item {
+    min-height: 550px;
+  }
+  
+  .slider_section .carousel-item.active,
+  .slider_section .carousel-item-next,
+  .slider_section .carousel-item-prev {
+    display: flex !important;
+    align-items: center;
+  }
+
+  .slider_section .row {
+    height: 100%;
+  }
+
+  /* Fijar un alto estandarizado para la información y prever el texto en 3 líneas */
+  .slider_section .detail-box {
+    min-height: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .slider_section .detail-box h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Fijar una altura máxima para las diferentes proporciones de imágenes */
+  .slider_section .img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    margin-top: 20px;
+  }
+
+  .slider_section .img-box img {
+    max-height: 240px;
+    width: auto;
+    object-fit: contain;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
