@@ -2407,9 +2407,11 @@ body.page-locked {
   0% {
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
   }
+
   70% {
     box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
   }
@@ -2418,15 +2420,17 @@ body.page-locked {
 /* ===================================
    CORRECCIÓN DEL CARRUSEL EN MÓVILES (ALTURA UNIFORME)
    =================================== */
+
+
 @media (max-width: 768px) {
   .slider_section .carousel-inner {
-    min-height: 550px;
+    min-height: 620px;
   }
-  
+
   .slider_section .carousel-item {
-    min-height: 550px;
+    min-height: 620px;
   }
-  
+
   .slider_section .carousel-item.active,
   .slider_section .carousel-item-next,
   .slider_section .carousel-item-prev {
@@ -2436,59 +2440,84 @@ body.page-locked {
 
   .slider_section .row {
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 20px;
+    flex-direction: column-reverse;
   }
 
-  /* El div(1) tiene el texto y el botón. El div(2) tiene la imagen. */
-  .slider_section .row > div:nth-child(1) {
-    order: 2;
-  }
-
-  .slider_section .row > div:nth-child(2) {
-    order: 1;
-  }
-
-  /* Información del slider - Abajo de la imagen */
   .slider_section .detail-box {
-    height: auto;
+    min-height: 180px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 10px;
-    padding-bottom: 25px;
+    padding: 16px 16px 4px 16px;
+    /* ← menos padding abajo */
   }
 
-  .slider_section .detail-box h1 {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-  }
-
-  .slider_section .detail-box p {
-    margin-bottom: 15px;
-  }
-
-  /* Imagen del slider - Arriba y mucho más grande */
   .slider_section .img-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 380px; 
-    margin-top: 5px;
-    margin-bottom: 10px;
+    width: 100%;
+    min-height: 340px;
+    max-height: 380px;
+    padding: 10px 0;
+    margin-top: 0;
   }
 
   .slider_section .img-box img {
     max-height: 360px;
+    max-width: 90%;
     width: auto;
-    max-width: 100%;
+    height: auto;
     object-fit: contain;
-    transform: scale(1.15); /* Aumenta el tamaño visual un 15% */
+    display: block;
+  }
+
+  /* ← CLAVE: eliminar espacio del container de los indicadores */
+  .slider_section .carousel>.container {
+    padding: 0 !important;
+    margin-top: -10px;
+    /* sube los indicadores hacia el botón */
+  }
+
+  .slider_section .carousel-indicators {
+    position: static;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
   }
 }
+
+@media (max-width: 480px) {
+
+  .slider_section .carousel-inner,
+  .slider_section .carousel-item {
+    min-height: 580px;
+  }
+
+  .slider_section .img-box {
+    min-height: 300px;
+    max-height: 320px;
+  }
+
+  .slider_section .img-box img {
+    max-height: 300px;
+    max-width: 95%;
+  }
+
+  .slider_section .detail-box {
+    min-height: 160px;
+    padding: 12px 12px 4px 12px;
+  }
+
+  .slider_section .carousel>.container {
+    margin-top: -10px;
+  }
+}
+
+
+
+
 
 /*# sourceMappingURL=style.css.map */
