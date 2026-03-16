@@ -2436,36 +2436,58 @@ body.page-locked {
 
   .slider_section .row {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;
   }
 
-  /* Fijar un alto estandarizado para la información y prever el texto en 3 líneas */
+  /* El div(1) tiene el texto y el botón. El div(2) tiene la imagen. */
+  .slider_section .row > div:nth-child(1) {
+    order: 2;
+  }
+
+  .slider_section .row > div:nth-child(2) {
+    order: 1;
+  }
+
+  /* Información del slider - Abajo de la imagen */
   .slider_section .detail-box {
-    min-height: 250px;
-    height: 250px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-top: 10px;
+    padding-bottom: 25px;
   }
 
   .slider_section .detail-box h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
   }
 
-  /* Fijar una altura máxima para las diferentes proporciones de imágenes */
+  .slider_section .detail-box p {
+    margin-bottom: 15px;
+  }
+
+  /* Imagen del slider - Arriba y mucho más grande */
   .slider_section .img-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 250px;
-    margin-top: 20px;
+    height: 380px; 
+    margin-top: 5px;
+    margin-bottom: 10px;
   }
 
   .slider_section .img-box img {
-    max-height: 240px;
+    max-height: 360px;
     width: auto;
+    max-width: 100%;
     object-fit: contain;
+    transform: scale(1.15); /* Aumenta el tamaño visual un 15% */
   }
 }
 
