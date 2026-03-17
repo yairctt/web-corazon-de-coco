@@ -370,6 +370,16 @@
             "nombre": "Clásico Red Velvet",
             "imagen": "images/clasico_red_velvet.png",
             "descripcion": "El favorito de siempre: bizcocho aterciopelado con su distintivo color rojizo y frosting de queso crema."
+        },
+        {
+            "nombre": "Pastel Matilda",
+            "imagen": "images/pastel_matilda.png",
+            "descripcion": "Pastel triple de chocolate. Ideal para los amantes del chocolate."
+        },
+        {
+            "nombre": "Brownies",
+            "imagen": "images/brownie.png",
+            "descripcion": "Brownies con chispas de chocolate. Perfectos para acompañar tu café o como detalle especial."
         }
     ],
     "Fresas": [
