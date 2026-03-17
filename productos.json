@@ -3,7 +3,7 @@
         {
             "nombre": "Mini Pastel cumple-mes",
             "imagen": "images/pastel_2_meses.png",
-            "descripcion": "Bizcocho de vainilla remojado en tres leches, ideal para celebrar el segundo mes."
+            "descripcion": "Bizcocho de vainilla relleno de crema de avellanas."
         },
         {
             "nombre": "Pastel con Rosas",
@@ -21,14 +21,14 @@
             "descripcion": "Bizcocho esponja con topping de frutos frescos de temporada."
         },
         {
-            "nombre": "Pastel Where's Chicky",
+            "nombre": "Pastel Where is Chicky",
             "imagen": "images/pastel_globos.png",
-            "descripcion": "Pastel festivo decorado con mini globos y betún de mantequilla."
+            "descripcion": "Pastel doble altura de red velvet con decoraciones artesanales."
         },
         {
             "nombre": "Pastel Los Picapiedra",
             "imagen": "images/pastel_pica_piedras.png",
-            "descripcion": "Divertido diseño de Los Picapiedra con relleno cremoso de chocolate."
+            "descripcion": "Diseño de Los Picapiedra con relleno cremoso de chocolate, ideal para celebrar momentos especiales"
         },
         {
             "nombre": "Pastel Snoopy",
@@ -43,7 +43,7 @@
         {
             "nombre": "Pastel Happy Birthday",
             "imagen": "images/red_moños.png",
-            "descripcion": "Pastel de vainilla remojado en tres leches con relleno de chocolate."
+            "descripcion": "Pastel de vainilla humedecido de tres leches con relleno de chocolate."
         },
         {
             "nombre": "Pastel de Aniversario de Boda",
@@ -58,12 +58,12 @@
         {
             "nombre": "Mini pastel de Aniversario",
             "imagen": "images/pastel_3er_aniversario.png",
-            "descripcion": "Bizcocho humedecido en tres leches, perfecto para conmemorar tres años de momentos especiales."
+            "descripcion": "Bizcocho humedecido en tres leches, perfecto para celebrar momentos especiales."
         },
         {
             "nombre": "Pastel Cowgirl",
             "imagen": "images/pastel_comboy.png",
-            "descripcion": "Diseño temático rústico con detalles inspirados en el estilo vaquero."
+            "descripcion": "Diseño temático con detalles inspirados en el estilo vaquero."
         },
         {
             "nombre": "Pastel en Plancha",
@@ -88,17 +88,17 @@
         {
             "nombre": "Pastel con Perlas Comestibles",
             "imagen": "images/pastel_con_perlas_comestibles.png",
-            "descripcion": "Elegante diseño decorado con perlas de azúcar, bizcocho de vainilla y relleno premium."
+            "descripcion": "Elegante diseño decorado con perlas de azúcar, red velvet y relleno de queso crema."
         },
         {
             "nombre": "Pastel Chico",
             "imagen": "images/happy_by.png",
-            "descripcion": "Bizcocho de vainilla remojado en almibar con relleno de fresas con crema."
+            "descripcion": "Bizcocho de vainilla humedecido en tres leches con relleno de fresas con crema."
         },
         {
             "nombre": "Pastel Rojo",
             "imagen": "images/pastel_44.png",
-            "descripcion": "Bizcocho de vainilla remojado en tres leches con relleno de chocolate."
+            "descripcion": "Bizcocho de vainilla humedecido en tres leches con relleno de chocolate."
         },
         {
             "nombre": "Mini pastel de Aniversario",
@@ -108,12 +108,12 @@
         {
             "nombre": "Pastel Brilloso",
             "imagen": "images/rojo_brillo_pastel.png",
-            "descripcion": "Bizcocho de vainilla remojado en tres leches con relleno de chocolate."
+            "descripcion": "Bizcocho de vainilla humedecido en tres leches con relleno de fresas con crema."
         },
         {
             "nombre": "Mini pastel de Cumpleaños",
             "imagen": "images/HBO.png",
-            "descripcion": "Bizcocho de vainilla con relleno de chocolate."
+            "descripcion": "Bizcocho de vainilla con relleno de crema de avellanas."
         },
         {
             "nombre": "Pastel de cumpleaños",
@@ -123,37 +123,37 @@
         {
             "nombre": "Mini pastel de cumpleaños",
             "imagen": "images/mylove_pastel_azul.png",
-            "descripcion": "Bizcocho de vainilla humedecido en 3 leches con relleno de <br>chocolate. "
+            "descripcion": "Bizcocho de vainilla humedecido en 3 leches con relleno de crema de avellanas. "
         },
         {
             "nombre": "Pastel con flores",
             "imagen": "images/pastel_pisos.png",
-            "descripcion": "Un sabor diferente de <br>Bizcocho por cada<br> piso del pastel ."
+            "descripcion": "Impresionante pastel de pisos con diferentes sabores."
         },
         {
             "nombre": "Mini pastel cumple-mes",
             "imagen": "images/5_monts.png",
-            "descripcion": "Pan esponja humedecido en 3 leches chocolatada relleno de crema de avellanas."
+            "descripcion": "Pan esponja humedecido en 3 leches chocolatada relleno de cookies and cream."
         },
         {
             "nombre": "Mini pastel con cupcakes",
             "imagen": "images/pastel_person.png",
-            "descripcion": "Bizcocho de vainilla relleno con crema de avellanas con 2 cupcakes red velvet. "
+            "descripcion": "Bizcocho de vainilla relleno de cajeta con 2 cupcakes red velvet. "
         },
         {
             "nombre": "Pastel chico brilloso",
             "imagen": "images/happy_rojo.png",
-            "descripcion": "Pan red velvet relleno <br>con frosting de <br>queso crema."
+            "descripcion": "Pan red velvet relleno de zarzamora con queso crema."
         },
         {
             "nombre": "Mini Pastel Día de las Madres",
             "imagen": "images/f_dia_mami.png",
-            "descripcion": "Bizcocho de vainilla humedecido en 3 leches chocolatada relleno de crema de avellanas."
+            "descripcion": "Bizcocho de vainilla humedecido en 3 leches relleno de cafe."
         },
         {
             "nombre": "Pastel chico cumple-mes",
             "imagen": "images/6_meses_pastel.png",
-            "descripcion": "Bizcocho de vainilla remojado en tres leches con relleno de chocolate."
+            "descripcion": "Bizcocho de vainilla remojado en tres leches con relleno de nuez."
         },
         {
             "nombre": "Pastel de Dinosaurios",
@@ -178,37 +178,37 @@
         {
             "nombre": "Pastel chico cumple-mes",
             "imagen": "images/pastel_naranjas.png",
-            "descripcion": "Bizcocho de vainilla humedecido en 3 leches chocolatada relleno con crema de avellanas."
+            "descripcion": "Bizcocho de vainilla humedecido en 3 leches relleno de cafe."
         },
         {
             "nombre": "Mini-pastel de girasoles",
             "imagen": "images/pastel_rosas_amarillas.png",
-            "descripcion": "izcocho de vainilla humedecido en 3 leches chocolatada relleno con crema de avellanas con nueces."
+            "descripcion": "Bizcocho de vainilla humedecido en 3 leches chocolatada relleno de cookies and cream."
         },
         {
             "nombre": "Pastel minimalista",
             "imagen": "images/pastel_17.png",
-            "descripcion": "Este pastel es de vainilla con betún de mantequilla y lettering personalizado"
+            "descripcion": "Pastel red velvet relleno de queso crema."
         },
         {
             "nombre": "Pastel de Toy Story",
             "imagen": "images/pastel_liam.png",
-            "descripcion": "Bizcocho de vainilla remojado en tres leches con relleno de chocolate."
+            "descripcion": "Bizcocho de vainilla humedecido en tres leches con relleno de nuez."
         },
         {
             "nombre": "Pastel de Rosita Fresita",
             "imagen": "images/pastel_rosita.png",
-            "descripcion": "Bizcocho de vainilla remojado en tres leches con relleno de chocolate."
+            "descripcion": "Bizcocho de vainilla remojado en tres leches con relleno de coco con piña."
         },
         {
             "nombre": "Pastel de Winnie Pooh",
             "imagen": "images/pastel_winieeh.png",
-            "descripcion": "Un pastel lleno de miel y amor remojado en tres leches con relleno de chocolate."
+            "descripcion": "Un pastel lleno de miel y amor remojado en tres leches con relleno de zarzamora."
         },
         {
-            "nombre": "Pastelito Campestre",
+            "nombre": "Pastel Rústico",
             "imagen": "images/pastel_piso_fresa.png",
-            "descripcion": "Pastel con frutas frescasde vainilla remojado en tres leches con relleno de chocolate."
+            "descripcion": "Pastel con frutas frescas de vainilla remojado en tres leches con relleno de cookies and cream."
         },
         {
             "nombre": "Pastel vintage",
@@ -221,7 +221,7 @@
             "descripcion": "Capas de red velvet, cubiertas con crema suave y frutas frescas que realzan su sabor."
         },
         {
-            "nombre": "Snoopy soñador",
+            "nombre": "Vintage Snoopy",
             "imagen": "images/pastel_snoppy.png",
             "descripcion": "Cada detalle hecho a mano, desde los tonos empolvados hasta los brillos sutiles."
         },
@@ -233,12 +233,12 @@
         {
             "nombre": "Pastel Squid Game",
             "imagen": "images/mini_squid.png",
-            "descripcion": "Bizcocho de vainilla remojado en tres leches con relleno de chocolate."
+            "descripcion": "Bizcocho de vainilla humedecido en tres leches con relleno de chocolate."
         },
         {
             "nombre": "Pastel Snoopy",
             "imagen": "images/pastel_snoppy_globos.png",
-            "descripcion": "Bizcocho de vainilla remojado en tres leches con relleno de chocolate."
+            "descripcion": "Bizcocho de vainilla humedecido en tres leches con relleno de chocolate."
         },
         {
             "nombre": "Pastel Stitch",
@@ -251,14 +251,14 @@
             "descripcion": "Pastel personalizado con cubierta de chocolate y con rosas comestibles."
         },
         {
-            "nombre": "Pastel de Cumpleaños",
+            "nombre": "Pastel tipo Tradicional",
             "imagen": "images/pastel_bllanco_cumple.png",
-            "descripcion": "Bizcocho de vainilla remojado en tres leches con relleno de chocolate."
+            "descripcion": "Bizcocho de vainilla humedecido en tres leches con relleno de piña con coco."
         },
         {
             "nombre": "Monstruo Come Galletas",
             "imagen": "images/pastel_mostro_come_galletas.png",
-            "descripcion": "Bizcocho de vainilla remojado en tres leches con relleno de chocolate."
+            "descripcion": "Bizcocho de vainilla humedecido en tres leches con relleno de cookies and cream."
         }
     ],
     "Mesas de Postres": [
@@ -276,18 +276,23 @@
             "nombre": "Mesa de postres para 90 personas",
             "imagen": "images/mesa_dulces.png",
             "descripcion": "Postres dulces: chocoflan, fresas con crema, red velvet, tarta de vainilla, cheesecake de queso con mermelada de fresa, pay de queso, tarta de mermelada con crema diplomática, natilla de vainilla y cake pops de red velvet."
+        },
+        {
+            "nombre": "Mesa de postres para bodas",
+            "imagen": "images/mesa_postres_fav.png",
+            "descripcion": "Montaje elegante para bodas. Incluye: Cupcakes, tartas de queso, limón y crema diplomática, manzanas enchiladas, red velvet, mojaditos de cajeta, trufas y natilla de nuez. Cada detalle hecho para complementar un momento tan especial con el sello de Corazón de Coco."
         }
     ],
     "Cupcakes": [
         {
             "nombre": "Cupcakes con flores comestibles",
             "imagen": "images/cupcakes_con_flores_comestibles.png",
-            "descripcion": "Delicados cupcakes decorados con flores naturales comestibles, ideales para eventos elegantes."
+            "descripcion": "Delicados cupcakes decorados con flores naturales comestibles y detalles en fondant."
         },
         {
             "nombre": "Cupcakes de vainilla con blueberry",
             "imagen": "images/cupcakes_de_vainilla_c_blueberry.png",
-            "descripcion": "Esponjosos cupcakes de vainilla con arándanos frescos y un toque de crema suave."
+            "descripcion": "Esponjosos cupcakes de vainilla con moras frescas y un toque de crema suave."
         },
         {
             "nombre": "Mini pastel con Cupcakes",
@@ -302,7 +307,7 @@
         {
             "nombre": "Cupcakes en forma de pastel",
             "imagen": "images/valentin_day.png",
-            "descripcion": "Especial de San Valentín, bizcocho de vainilla con detalles románticos en color rojo."
+            "descripcion": "Cuatro cupcakes en forma de pastel con fruta fresca y decoraciones a mano."
         }
     ],
     "Postres Enteros": [
@@ -329,17 +334,17 @@
         {
             "nombre": "Cheesecake con fresas",
             "imagen": "images/chesscake_con_fresas.png",
-            "descripcion": "Suave cheesecake de la casa decorado con fresas frescas y glaseado artesanal."
+            "descripcion": "Suave cheesecake de la casa decorado con fresas frescas."
         },
         {
             "nombre": "Chocoflan",
             "imagen": "images/chocofl.png",
-            "descripcion": "Delicioso Chocoflan casero artesanal.<br>Presentación individual."
+            "descripcion": "Delicioso Chocoflan casero artesanal."
         },
         {
-            "nombre": "Cheesecake de oreo",
+            "nombre": "Cheesecake Helado de oreo",
             "imagen": "images/postre.png",
-            "descripcion": "Clásico cheesecake de oreo.<br>Suave y delicioso."
+            "descripcion": "Cheesecake tipo helado de oreo. Perfecto para los amantes de la oreo."
         },
         {
             "nombre": "Pay de queso",
