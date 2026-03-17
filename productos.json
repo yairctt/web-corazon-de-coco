@@ -21,7 +21,7 @@
             "descripcion": "Bizcocho esponja con topping de frutos frescos de temporada."
         },
         {
-            "nombre": "Pastel con Globos",
+            "nombre": "Pastel de Where's Chicky",
             "imagen": "images/pastel_globos.png",
             "descripcion": "Pastel festivo decorado con mini globos y betún de mantequilla."
         },
@@ -31,7 +31,7 @@
             "descripcion": "Divertido diseño de Los Picapiedra con relleno cremoso de chocolate."
         },
         {
-            "nombre": "Pastel Snoopy 21",
+            "nombre": "Pastel Snoopy",
             "imagen": "images/pastel_snoppy_21.png",
             "descripcion": "Edición especial de Snoopy para cumpleaños 21, decorado a mano."
         },
@@ -46,7 +46,7 @@
             "descripcion": "Pastel de vainilla remojado en tres leches con relleno de chocolate."
         },
         {
-            "nombre": "Pastel Cumple y Aniversario de Boda",
+            "nombre": "Pastel Cumpleaños y Aniversario de Boda",
             "imagen": "images/cumple_y_aniversario_boda.png",
             "descripcion": "Un diseño especial de doble propósito, ideal para celebraciones compartidas con un toque elegante."
         },
@@ -61,7 +61,7 @@
             "descripcion": "Bizcocho humedecido en tres leches, perfecto para conmemorar tres años de momentos especiales."
         },
         {
-            "nombre": "Pastel Cowboy",
+            "nombre": "Pastel Cowgirl",
             "imagen": "images/pastel_comboy.png",
             "descripcion": "Diseño temático rústico con detalles inspirados en el estilo vaquero."
         },
@@ -84,6 +84,11 @@
             "nombre": "Pastel Rosetones",
             "imagen": "images/pastel_rosetones.png",
             "descripcion": "Cubierto totalmente con elegantes rosetones de betún suave en degradado."
+        },
+        {
+            "nombre": "Pastel con perlas comestibles",
+            "imagen": "images/pastel_con_perlas_comestibles.png",
+            "descripcion": "Elegante diseño decorado con perlas de azúcar, bizcocho de vainilla y relleno premium."
         },
         {
             "nombre": "Pastel chico",
@@ -275,9 +280,24 @@
     ],
     "Cupcakes": [
         {
-            "nombre": "Cupcakes y mini pastel",
-            "imagen": "images/pastel_mama.png",
-            "descripcion": "Mini pastel con bizcocho de vainilla remojado en tres leche relleno de nuez con cupcakes de red velvet."
+            "nombre": "Cupcakes con flores comestibles",
+            "imagen": "images/cupcakes_con_flores_comestibles.png",
+            "descripcion": "Delicados cupcakes decorados con flores naturales comestibles, ideales para eventos elegantes."
+        },
+        {
+            "nombre": "Cupcakes de vainilla con blueberry",
+            "imagen": "images/cupcakes_de_vainilla_c_blueberry.png",
+            "descripcion": "Esponjosos cupcakes de vainilla con arándanos frescos y un toque de crema suave."
+        },
+        {
+            "nombre": "Cupcakes y minipastel",
+            "imagen": "images/cupcakes_y_minipastel.png",
+            "descripcion": "Combo perfecto que incluye un mini pastel central acompañado de cupcakes a juego."
+        },
+        {
+            "nombre": "Cupcakes de feliz cumpleaños",
+            "imagen": "images/cupcakes_happy.png",
+            "descripcion": "Cupckaes de Red Velvet con chocolate y decoración de feliz cumpleaños."
         },
         {
             "nombre": "Cupcakes San Valentín",
@@ -297,6 +317,36 @@
     ],
     "Postres Enteros": [
         {
+            "nombre": "Pastel de zanahoria",
+            "imagen": "images/pastel_de_zanahoria.png",
+            "descripcion": "Receta casera con especias, nuez y una suave cobertura de crema de queso."
+        },
+        {
+            "nombre": "Carlota de limón",
+            "imagen": "images/postres_enteros.png",
+            "descripcion": "Postre frío clásico con capas de galleta y una crema cítrica refrescante."
+        },
+        {
+            "nombre": "Pay de queso",
+            "imagen": "images/pay_de_queso.png",
+            "descripcion": "Textura cremosa sobre una base de galleta crujiente, horneado a la perfección."
+        },
+        {
+            "nombre": "Red Velvet relleno de Cheesecake",
+            "imagen": "images/postres.png",
+            "descripcion": "Increíble combinación de bizcocho red velvet con un corazón cremoso de cheesecake."
+        },
+        {
+            "nombre": "Cheesecake con fresas",
+            "imagen": "images/chesscake_con_fresas.png",
+            "descripcion": "Suave cheesecake de la casa decorado con fresas frescas y glaseado artesanal."
+        },
+        {
+            "nombre": "Chocoflan con fresas",
+            "imagen": "images/choco_flan_con_fresas.png",
+            "descripcion": "Nuestro clásico chocoflan acompañado de fresas frescas de temporada."
+        },
+        {
             "nombre": "Chocoflan",
             "imagen": "images/chocofl.png",
             "descripcion": "Delicioso Chocoflan casero artesanal.<br>Presentación individual."
@@ -315,13 +365,33 @@
             "nombre": "Flan Napolitano",
             "imagen": "images/glaseado.png",
             "descripcion": "Clásico flan napolitano en porción personal.<br>Suave y delicioso."
+        },
+        {
+            "nombre": "Galletas",
+            "imagen": "images/galletas.png",
+            "descripcion": "Variedad de galletas horneadas, perfectas para acompañar tu café o como detalle especial."
+        },
+        {
+            "nombre": "Clásico Red Velvet",
+            "imagen": "images/clasico_red_velvet.png",
+            "descripcion": "El favorito de siempre: bizcocho aterciopelado con su distintivo color rojizo y frosting de queso crema."
         }
     ],
     "Fresas": [
         {
-            "nombre": "Fresas con chocolate",
-            "imagen": "images/fresas_rosas.png",
-            "descripcion": "Dieciseis fresas cubiertas de chocolate blanco con brillo comestible."
+            "nombre": "Fresas con brillo",
+            "imagen": "images/fresas_con_brillo.png",
+            "descripcion": "Elegantes fresas seleccionadas con un acabado brillante comestible, ideales para regalo."
+        },
+        {
+            "nombre": "Fresas con Mazapán",
+            "imagen": "images/fresas_mazapan.png",
+            "descripcion": "Una combinación única de fresas cubiertas con chocolate y una lluvia de mazapán artesanal."
+        },
+        {
+            "nombre": "Fresas Personalizadas",
+            "imagen": "images/fresas_personalizadas.png",
+            "descripcion": "Fresas decoradas con diseños exclusivos según tu evento o preferencia de color."
         }
     ]
 }
