@@ -194,7 +194,7 @@ function renderizarGridAntojos() {
     `;
 
     return `
-      <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex px-1 px-sm-2">
+      <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex rebanada-col">
         <div class="rebanada-card w-100 ${estaDisponible ? '' : 'rebanada-agotada'}" style="position: relative;">
           ${statusOverlay}
           <span class="${badgeClass}">${item.badge || 'Del día'}</span>

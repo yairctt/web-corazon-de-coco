@@ -541,6 +541,11 @@ h1, h2,
   line-height: 1.6;
 }
 
+.rebanada-col {
+  padding: 0 10px;
+  margin-bottom: 24px;
+}
+
 .rebanada-card {
   background: var(--c-brand-cream);
   border: 1px solid var(--c-brand-border);
@@ -1968,12 +1973,22 @@ html, body {
     font-size: 0.78rem !important;
   }
 
-  /* Vitrina de antojos: cuadrícula de 2 columnas con respiro */
+  /* Vitrina de antojos: cuadrícula de 2 columnas con respiro y marco visible */
   .seccion-antojos {
-    padding: 16px 0 55px 0 !important;
+    padding: 16px 0 60px 0 !important;
   }
   .seccion-antojos .container {
-    padding: 0 10px;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+  #gridAntojos {
+    margin-left: -5px !important;
+    margin-right: -5px !important;
+  }
+  #gridAntojos .rebanada-col {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    margin-bottom: 12px !important;
   }
   .antojos-header {
     margin-bottom: 14px !important;
@@ -1991,17 +2006,17 @@ html, body {
     font-size: 0.82rem !important;
     line-height: 1.35 !important;
     color: #66758c !important;
-    padding: 0 8px;
+    padding: 0 4px;
     margin-bottom: 0 !important;
   }
 
   /* Tarjeta de Rebanada en cuadrícula móvil de 2 columnas */
   .rebanada-card {
-    padding: 12px 9px 14px 9px !important;
+    padding: 12px 10px 14px 10px !important;
     border-radius: 18px !important;
-    box-shadow: 0 2px 10px rgba(46, 64, 87, 0.05);
+    box-shadow: 0 4px 14px rgba(46, 64, 87, 0.08) !important;
     background: #FFFFFF !important;
-    border: 1px solid rgba(232, 196, 176, 0.45) !important;
+    border: 1.5px solid #eadad0 !important;
   }
   .pastry-circle-frame.compact {
     width: 96px !important;
