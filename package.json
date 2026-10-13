@@ -1,0 +1,12 @@
+{
+  "name": "web-corazon-de-coco",
+  "version": "1.0.0",
+  "description": "Corazón de Coco Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.11.5"
+  }
+}

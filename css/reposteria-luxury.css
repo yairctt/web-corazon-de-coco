@@ -1,0 +1,2365 @@
+/* ==========================================================================
+   CORAZÓN DE COCO - SISTEMA DE VENTAS Y UX/UI CON COLORES OFICIALES DE MARCA
+   Fases 1 & 2: Colores Oficiales (#e8c4b0, #fde7eb, #2E4057, #fcf9f5),
+   Logo Oficial (Dancing Script + Outfit), Marcos Circulares de Pastelería,
+   Loader de Batidor y Barra de Rebanadas & Antojos del Día.
+   ========================================================================== */
+
+:root {
+  /* Colores Oficiales de la Marca Corazón de Coco */
+  --c-brand-primary: #e8c4b0;        /* Rosa durazno suave del corazón oficial */
+  --c-brand-primary-hover: #d1ab96;  /* Tono presionado */
+  --c-brand-secondary: #fde7eb;      /* Rosa suave del círculo del logo */
+  --c-brand-dark: #2E4057;           /* Azul pizarra elegante oficial */
+  --c-brand-dark-light: #445973;     /* Tono secundario de lectura */
+  --c-brand-cream: #fcf9f5;          /* Crema suave de fondo */
+  --c-brand-white: #ffffff;          /* Blanco puro */
+  --c-brand-border: #f0dbcf;         /* Borde sutil a tono */
+
+  /* Tipografías Oficiales de la Marca */
+  --font-title: 'Dancing Script', cursive;
+  --font-base: 'Outfit', sans-serif;
+
+  /* Sombras Suaves Oficiales */
+  --shadow-brand-sm: 0 4px 12px rgba(46, 64, 87, 0.06);
+  --shadow-brand-md: 0 10px 25px rgba(46, 64, 87, 0.10);
+  --shadow-brand-lg: 0 18px 40px rgba(46, 64, 87, 0.14);
+  --shadow-brand-primary: 0 6px 18px rgba(232, 196, 176, 0.45);
+  --shadow-brand-dark: 0 6px 18px rgba(46, 64, 87, 0.25);
+
+  --radius-pill: 999px;
+  --radius-card: 20px;
+}
+
+/* ==========================================================================
+   1. RESPETO TOTAL AL LOGO Y TIPOGRAFÍA OFICIAL
+   ========================================================================== */
+
+/* La navbar-brand mantiene su tipografía oficial original y su corazón difuminado */
+.navbar-brand {
+  font-family: var(--font-title) !important;
+  font-size: 32px !important;
+  color: var(--c-brand-dark) !important;
+  display: inline-flex;
+  align-items: center;
+}
+
+.navbar-brand span {
+  font-family: var(--font-title) !important;
+  color: var(--c-brand-dark) !important;
+}
+
+.navbar-logo-stack .logo-heart {
+  color: var(--c-brand-primary) !important;
+  filter: blur(1.5px) !important;
+  transform: scale(0.95);
+}
+
+/* Títulos con la tipografía oficial Dancing Script */
+h1, h2, 
+.heading_container h2,
+.boutique-title, 
+.featured-title, 
+.about-boutique-title,
+.boutique-page-title, 
+.boutique-category-title, 
+.antojos-title {
+  font-family: var(--font-title) !important;
+  color: var(--c-brand-dark);
+  font-weight: 700 !important;
+}
+
+/* ==========================================================================
+   HEADER MINIMALISTA ESTILO UBEREATS (REEMPLAZO DE HEROS CON FOTOS PESADAS)
+   ========================================================================== */
+.new-hero-section {
+  display: none !important;
+}
+
+.app-store-hero {
+  background: linear-gradient(180deg, #FFFFFF 0%, #fcf9f5 100%);
+  border-bottom: 1px solid rgba(46, 64, 87, 0.08);
+  padding: 24px 0 16px 0;
+  position: relative;
+}
+
+.store-greeting-kicker,
+.store-greeting-badge {
+  display: block;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-family: var(--font-base) !important;
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  color: #d86950 !important;
+  margin-bottom: 4px !important;
+  letter-spacing: 0.3px;
+}
+
+.store-greeting-title {
+  font-family: var(--font-title) !important;
+  font-size: 3.2rem !important;
+  color: var(--c-brand-dark) !important;
+  margin-bottom: 4px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.store-greeting-subtitle {
+  font-family: var(--font-base);
+  color: #66758c;
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+  max-width: 600px;
+}
+
+/* Chips deslizables estilo UberEats */
+.app-chips-scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 0 8px 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.app-chips-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.app-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  background: #FFFFFF;
+  border: 1.5px solid #e5dcd6;
+  color: var(--c-brand-dark);
+  font-family: var(--font-base);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: var(--radius-pill);
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(46, 64, 87, 0.04);
+}
+
+.app-chip:hover {
+  background: var(--c-brand-secondary);
+  border-color: var(--c-brand-primary);
+  color: var(--c-brand-dark);
+}
+
+.app-chip.active {
+  background: var(--c-brand-dark);
+  border-color: var(--c-brand-dark);
+  color: #FFFFFF !important;
+  box-shadow: var(--shadow-brand-dark);
+}
+
+.app-chip.active i {
+  color: var(--c-brand-primary);
+}
+
+/* Rediseño ligero para páginas internas (sin banner.jpg oscuro) */
+.boutique-page-header {
+  position: relative !important;
+  background: linear-gradient(180deg, #FFFFFF 0%, #fcf9f5 100%) !important;
+  background-image: none !important;
+  padding: 24px 0 16px 0 !important;
+  text-align: left !important;
+  border-bottom: 1px solid rgba(46, 64, 87, 0.08);
+}
+
+.boutique-page-header::before {
+  display: none !important;
+}
+
+.boutique-page-title {
+  font-family: var(--font-title) !important;
+  color: var(--c-brand-dark) !important;
+  font-size: 3.2rem !important;
+  margin-bottom: 6px !important;
+  font-weight: 700 !important;
+  text-shadow: none !important;
+  line-height: 1.1 !important;
+}
+
+.boutique-page-subtitle {
+  font-family: var(--font-base) !important;
+  color: #66758c !important;
+  font-size: 0.95rem !important;
+  max-width: 650px !important;
+  margin-bottom: 14px !important;
+  text-shadow: none !important;
+}
+
+@media (max-width: 767.98px) {
+  .app-store-hero,
+  .boutique-page-header {
+    padding: 18px 0 14px 0 !important;
+  }
+  .store-greeting-title,
+  .boutique-page-title {
+    font-size: 2.6rem !important;
+  }
+  .store-greeting-subtitle,
+  .boutique-page-subtitle {
+    font-size: 0.88rem !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+/* Top bar con colores oficiales y opción de cierre */
+.top-bar {
+  background-color: var(--c-brand-dark) !important;
+  color: var(--c-brand-cream) !important;
+  font-family: var(--font-base) !important;
+  transition: all 0.35s ease;
+  overflow: hidden;
+  max-height: 50px;
+  opacity: 1;
+}
+
+.top-bar.top-bar-hidden {
+  max-height: 0 !important;
+  opacity: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  pointer-events: none;
+}
+
+.top-bar a {
+  color: #e2ebf4 !important;
+}
+
+.top-bar a:hover {
+  color: var(--c-brand-primary) !important;
+}
+
+.top-bar-close-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0 6px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.top-bar-close-btn:hover {
+  color: var(--c-brand-primary);
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.1);
+}
+
+/* Navbar: limpio, sin desbordamientos y scroll natural enfocado en ventas */
+.header_section.premium-header {
+  position: relative !important;
+  top: auto !important;
+  z-index: 100 !important;
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  box-shadow: 0 2px 15px rgba(46, 64, 87, 0.05) !important;
+  border-bottom: 1px solid var(--c-brand-secondary) !important;
+  padding: 8px 0 !important;
+}
+
+.custom_nav-container .navbar-nav {
+  align-items: center;
+}
+
+.custom_nav-container .navbar-nav .nav-link {
+  font-family: var(--font-base) !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  color: var(--c-brand-dark) !important;
+  padding: 6px 12px !important;
+  white-space: nowrap !important;
+}
+
+.custom_nav-container .navbar-nav .nav-link:hover,
+.custom_nav-container .navbar-nav .nav-item.active .nav-link {
+  color: var(--c-brand-primary) !important;
+}
+
+/* ==========================================================================
+   2. BOTONES OFICIALES DE MARCA CON MICRO-INTERACCIONES
+   ========================================================================== */
+
+.btn-primary-custom, 
+.nav-quote-btn {
+  font-family: var(--font-base) !important;
+  background-color: var(--c-brand-dark) !important;
+  color: var(--c-brand-white) !important;
+  border: 2px solid var(--c-brand-dark) !important;
+  border-radius: var(--radius-pill) !important;
+  font-weight: 600 !important;
+  box-shadow: var(--shadow-brand-dark) !important;
+  padding: 10px 26px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+  text-decoration: none !important;
+}
+
+.btn-primary-custom:hover, 
+.nav-quote-btn:hover {
+  background-color: var(--c-brand-primary) !important;
+  border-color: var(--c-brand-primary) !important;
+  color: var(--c-brand-dark) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow-brand-primary) !important;
+}
+
+.btn-outline-custom {
+  font-family: var(--font-base) !important;
+  background-color: var(--c-brand-white) !important;
+  color: var(--c-brand-dark) !important;
+  border: 2px solid var(--c-brand-white) !important;
+  border-radius: var(--radius-pill) !important;
+  font-weight: 600 !important;
+  box-shadow: var(--shadow-brand-sm) !important;
+  padding: 10px 26px !important;
+  transition: all 0.3s ease !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-outline-custom:hover {
+  background-color: var(--c-brand-primary) !important;
+  border-color: var(--c-brand-primary) !important;
+  color: var(--c-brand-dark) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* ==========================================================================
+   3. MARCOS CIRCULARES PARA PASTELES & POSTRES (Regla: Todas circulares)
+   ========================================================================== */
+
+.pastry-circle-frame,
+.boutique-img-ring,
+.boutique-product-img-wrapper,
+.boutique-modal-img-wrapper,
+.modal-imagen {
+  width: 220px !important;
+  height: 220px !important;
+  border-radius: 50% !important;
+  border: 4px solid var(--c-brand-secondary) !important;
+  outline: 2px solid var(--c-brand-primary) !important;
+  outline-offset: 3px;
+  background-color: var(--c-brand-white) !important;
+  box-shadow: var(--shadow-brand-primary) !important;
+  position: relative;
+  overflow: hidden !important;
+  margin: 0 auto 18px auto;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+.boutique-modal-img-wrapper,
+.modal-imagen {
+  width: 260px !important;
+  height: 260px !important;
+  margin-bottom: 0 !important;
+}
+
+.pastry-circle-frame img,
+.boutique-img-ring img,
+.boutique-product-img-wrapper img,
+.boutique-modal-img-wrapper img,
+.modal-imagen img {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  transition: transform 0.4s ease !important;
+}
+
+.boutique-item:hover .boutique-img-ring,
+.boutique-product-card:hover .boutique-product-img-wrapper,
+.rebanada-card:hover .pastry-circle-frame {
+  outline-color: var(--c-brand-dark) !important;
+  border-color: var(--c-brand-primary) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(46, 64, 87, 0.2) !important;
+}
+
+.boutique-item:hover .boutique-img-ring img,
+.boutique-product-card:hover .boutique-product-img-wrapper img,
+.rebanada-card:hover .pastry-circle-frame img {
+  transform: scale(1.08);
+}
+
+.pastry-circle-frame.compact {
+  width: 180px !important;
+  height: 180px !important;
+}
+
+/* ==========================================================================
+   4. BESPOKE WHISK LOADER (CON COLORES DE MARCA)
+   ========================================================================== */
+
+.boutique-whisk-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.whisk-animation-wrapper {
+  position: relative;
+  width: 85px;
+  height: 85px;
+  margin-bottom: 20px;
+}
+
+.whisk-bowl-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 196, 176, 0.6) 0%, rgba(253, 231, 235, 0) 70%);
+  animation: glowPulseBrand 2s infinite ease-in-out;
+}
+
+.whisk-svg-icon {
+  width: 75px;
+  height: 75px;
+  position: relative;
+  z-index: 2;
+  transform-origin: 50% 60%;
+  animation: whiskRotateBrand 1.6s infinite ease-in-out;
+}
+
+.whisk-drop {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background-color: var(--c-brand-primary);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  animation: dropBeatBrand 1.6s infinite ease-in-out;
+  z-index: 3;
+}
+
+.whisk-loader-text {
+  font-family: var(--font-title);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--c-brand-dark);
+  margin-bottom: 4px;
+}
+
+.whisk-loader-subtext {
+  font-family: var(--font-base);
+  font-size: 0.95rem;
+  color: #777;
+  letter-spacing: 0.5px;
+}
+
+@keyframes whiskRotateBrand {
+  0% { transform: rotate(-18deg); }
+  50% { transform: rotate(18deg); }
+  100% { transform: rotate(-18deg); }
+}
+
+@keyframes dropBeatBrand {
+  0%, 100% { transform: translate(-50%, 0) scale(1); }
+  50% { transform: translate(-50%, -8px) scale(1.2); }
+}
+
+@keyframes glowPulseBrand {
+  0%, 100% { opacity: 0.4; transform: scale(0.9); }
+  50% { opacity: 0.9; transform: scale(1.15); }
+}
+
+/* ==========================================================================
+   5. BARRA DE REBANADAS & ANTOJOS DEL DÍA (COLORES DE MARCA)
+   ========================================================================== */
+
+.seccion-antojos {
+  background-color: var(--c-brand-white);
+  padding: 80px 0 90px 0;
+  position: relative;
+  border-top: 2px solid var(--c-brand-secondary);
+  border-bottom: 2px solid var(--c-brand-secondary);
+}
+
+.antojos-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 45px auto;
+}
+
+.antojos-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--c-brand-secondary);
+  color: var(--c-brand-dark);
+  font-family: var(--font-base);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 6px 18px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 12px;
+  border: 1px solid var(--c-brand-primary);
+}
+
+.antojos-title {
+  font-size: 3.4rem !important;
+  margin-bottom: 8px;
+}
+
+.antojos-subtitle {
+  font-family: var(--font-base);
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.rebanada-col {
+  padding: 0 10px;
+  margin-bottom: 24px;
+}
+
+.rebanada-card {
+  background: var(--c-brand-cream);
+  border: 1px solid var(--c-brand-border);
+  border-radius: var(--radius-card);
+  padding: 24px 18px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.35s ease;
+  box-shadow: var(--shadow-brand-sm);
+  position: relative;
+  height: 100%;
+}
+
+.rebanada-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-brand-md);
+  border-color: var(--c-brand-primary);
+}
+
+.rebanada-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--c-brand-secondary);
+  color: var(--c-brand-dark);
+  font-family: var(--font-base);
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--c-brand-primary);
+  z-index: 5;
+}
+
+.rebanada-badge.hot {
+  background: var(--c-brand-primary);
+  color: var(--c-brand-dark);
+  font-weight: 800;
+}
+
+.rebanada-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.rebanada-name {
+  font-family: var(--font-title) !important;
+  font-size: 1.85rem !important;
+  font-weight: 700 !important;
+  color: var(--c-brand-dark) !important;
+  margin-bottom: 4px;
+}
+
+.rebanada-desc {
+  font-family: var(--font-base);
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.45;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.rebanada-footer {
+  width: 100%;
+  border-top: 1px dashed #e4d0c5;
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rebanada-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rebanada-price {
+  font-family: var(--font-base);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--c-brand-dark);
+}
+
+.rebanada-price span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #888;
+}
+
+.qty-control {
+  display: inline-flex;
+  align-items: center;
+  background: var(--c-brand-white);
+  border: 1px solid var(--c-brand-border);
+  border-radius: var(--radius-pill);
+  padding: 3px;
+}
+
+.qty-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  background: var(--c-brand-secondary);
+  color: var(--c-brand-dark);
+  font-size: 1rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.qty-btn:hover {
+  background: var(--c-brand-primary);
+}
+
+.qty-val {
+  min-width: 26px;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--c-brand-dark);
+}
+
+.btn-add-antojo {
+  width: 100%;
+  background: var(--c-brand-dark);
+  color: var(--c-brand-white);
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 10px 16px;
+  font-family: var(--font-base);
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow-brand-dark);
+}
+
+.btn-add-antojo:hover {
+  background: var(--c-brand-primary);
+  color: var(--c-brand-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-brand-primary);
+}
+
+/* ==========================================================================
+   6. BANDEJA DE ANTOJOS FLOTANTE (STICKY BAR)
+   ========================================================================== */
+
+.bandeja-antojos-sticky {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1040;
+  background: var(--c-brand-dark);
+  color: #FFFFFF;
+  border-radius: var(--radius-pill);
+  padding: 10px 16px 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 14px 35px rgba(46, 64, 87, 0.4);
+  border: 2px solid var(--c-brand-primary);
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform: translateY(120px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.bandeja-antojos-sticky.activa {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Notificación Toast al agregar rebanada/antojo a la bandeja */
+.antojo-toast-notification {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-140%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background: var(--c-brand-dark, #2E4057);
+  color: #FFFFFF;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-family: var(--font-base);
+  font-weight: 600;
+  font-size: 0.88rem;
+  box-shadow: 0 12px 28px rgba(46, 64, 87, 0.35);
+  border: 1.5px solid var(--c-brand-primary, #e8c4b0);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  max-width: 90vw;
+  transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.3, 1), opacity 0.3s ease, visibility 0.3s;
+}
+
+.antojo-toast-notification.active {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.bandeja-badge-count {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--c-brand-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: var(--c-brand-dark);
+}
+
+.bandeja-num-bubble {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--c-brand-dark);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 800;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--c-brand-primary);
+}
+
+.bandeja-info-resumen {
+  display: flex;
+  flex-direction: column;
+}
+
+.bandeja-titulo {
+  font-family: var(--font-base);
+  font-size: 0.8rem;
+  color: var(--c-brand-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+
+.bandeja-total-precio {
+  font-family: var(--font-base);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+.bandeja-btn-abrir {
+  background: var(--c-brand-primary);
+  color: var(--c-brand-dark) !important;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 10px 20px;
+  font-family: var(--font-base);
+  font-size: 0.92rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.bandeja-btn-abrir:hover {
+  background: #FFFFFF;
+  transform: scale(1.04);
+}
+
+/* Modal Cajita de Antojos */
+.cajita-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(46, 64, 87, 0.7);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 1060;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cajita-modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cajita-modal-panel {
+  background: var(--c-brand-white);
+  width: 100%;
+  max-width: 520px;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-brand-lg);
+  border: 2px solid var(--c-brand-secondary);
+  overflow: hidden;
+  transform: translateY(20px) scale(0.96);
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+}
+
+.cajita-modal-overlay.open .cajita-modal-panel {
+  transform: translateY(0) scale(1);
+}
+
+.cajita-header {
+  padding: 20px 25px;
+  background: var(--c-brand-secondary);
+  border-bottom: 1px solid var(--c-brand-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cajita-header-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cajita-header-title h4 {
+  font-family: var(--font-title) !important;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  color: var(--c-brand-dark) !important;
+  margin: 0;
+}
+
+.cajita-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--c-brand-dark);
+  cursor: pointer;
+  line-height: 1;
+}
+
+.cajita-body {
+  padding: 20px 25px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.cajita-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--c-brand-secondary);
+  gap: 12px;
+}
+
+.cajita-item-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid var(--c-brand-primary);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.cajita-item-det {
+  flex-grow: 1;
+}
+
+.cajita-item-nombre {
+  font-family: var(--font-base);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--c-brand-dark);
+}
+
+.cajita-item-precio {
+  font-family: var(--font-base);
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.cajita-item-del {
+  background: none;
+  border: none;
+  color: #a0aab5;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.cajita-item-del:hover {
+  color: #d9534f;
+}
+
+.cajita-footer {
+  padding: 20px 25px;
+  background: var(--c-brand-cream);
+  border-top: 1px solid var(--c-brand-border);
+}
+
+.cajita-total-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.cajita-total-label {
+  font-family: var(--font-base);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #666;
+}
+
+.cajita-total-val {
+  font-family: var(--font-base);
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--c-brand-dark);
+}
+
+.btn-pedir-cajita-wa {
+  width: 100%;
+  background: #25D366;
+  color: #FFFFFF !important;
+  font-family: var(--font-base);
+  font-weight: 700;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 13px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+}
+
+.btn-pedir-cajita-wa:hover {
+  background: #1EBE5D;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   7. BARRA DE NAVEGACIÓN INFERIOR ESTILO RAPPI (BOTTOM APP BAR)
+   ========================================================================== */
+
+.app-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(46, 64, 87, 0.09);
+  box-shadow: 0 -4px 22px rgba(46, 64, 87, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1030;
+  padding: 6px 10px calc(6px + env(safe-area-inset-bottom, 0px));
+  transition: all 0.3s ease;
+}
+
+/* En Desktop / Pantallas grandes: Barra Dock flotante centrada estilo Isla moderna */
+@media (min-width: 768px) {
+  .app-bottom-nav {
+    display: flex !important;
+    position: fixed !important;
+    bottom: 24px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: auto !important;
+    min-width: 460px !important;
+    max-width: 540px !important;
+    height: 64px !important;
+    border-radius: 50px !important;
+    background: rgba(255, 255, 255, 0.94) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(46, 64, 87, 0.12) !important;
+    box-shadow: 0 12px 36px rgba(46, 64, 87, 0.16) !important;
+    padding: 6px 18px !important;
+    z-index: 1030 !important;
+  }
+
+  .app-bottom-nav-item {
+    border-radius: 20px;
+    padding: 6px 14px;
+    transition: all 0.22s ease;
+  }
+
+  .app-bottom-nav-item:hover {
+    background: rgba(232, 196, 176, 0.22);
+    transform: translateY(-2px);
+  }
+}
+
+.app-bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-decoration: none !important;
+  color: #7b8898;
+  font-family: var(--font-base);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 5px 6px;
+  border-radius: 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+  line-height: 1.2;
+}
+
+.app-bottom-nav-item .nav-icon-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 24px;
+  margin-bottom: 2px;
+}
+
+.app-bottom-nav-item .nav-icon-wrap i {
+  font-size: 1.25rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.app-bottom-nav-item span.nav-label {
+  font-size: 0.73rem;
+  letter-spacing: 0.2px;
+}
+
+/* Hover */
+.app-bottom-nav-item:hover {
+  color: var(--c-brand-dark);
+}
+
+.app-bottom-nav-item:hover .nav-icon-wrap i {
+  transform: translateY(-2px);
+  color: var(--c-brand-dark);
+}
+
+/* Active State (Página o sección activa) */
+.app-bottom-nav-item.active {
+  color: var(--c-brand-dark) !important;
+  font-weight: 800 !important;
+  background: rgba(232, 196, 176, 0.28);
+}
+
+.app-bottom-nav-item.active .nav-icon-wrap i {
+  color: var(--c-brand-dark) !important;
+  transform: scale(1.12);
+}
+
+.app-bottom-nav-item.active span.nav-label {
+  color: var(--c-brand-dark) !important;
+  font-weight: 800;
+}
+
+/* Badge en la pestaña de Bandeja del Bottom Nav */
+.app-bottom-nav-item .header-cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  background: #e06d53 !important;
+  color: #FFFFFF !important;
+  font-size: 0.68rem;
+  font-weight: 800;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #FFFFFF;
+}
+
+/* Resaltado dinámico para la pestaña Bandeja cuando contiene productos */
+.app-bottom-nav-item.nav-item-bandeja.has-items .nav-icon-wrap i {
+  color: #e06d53 !important;
+  animation: pulse-basket 1.8s infinite;
+}
+.app-bottom-nav-item.nav-item-bandeja.has-items span.nav-label {
+  color: var(--c-brand-dark) !important;
+  font-weight: 700 !important;
+}
+
+@keyframes pulse-basket {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.18); }
+}
+/* Ajuste para evitar el renglón blanco debajo del footer:
+   El fondo html se alinea con el footer y el espacio para la barra dock queda DENTRO del footer oscuro */
+html {
+  background-color: var(--c-brand-dark) !important;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--c-brand-cream);
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.premium-footer {
+  margin-top: auto;
+  background-color: var(--c-brand-dark) !important;
+  color: var(--c-brand-cream) !important;
+  padding-bottom: 96px !important;
+  margin-bottom: 0 !important;
+}
+
+/* Footer Brand con logo oficial idéntico al header */
+.footer-brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+}
+
+.footer-brand .navbar-logo-stack {
+  font-size: 1.15rem !important;
+  width: 2em !important;
+  height: 2em !important;
+  line-height: 2em !important;
+  margin-right: 8px !important;
+  margin-top: -2px !important;
+  display: inline-block !important;
+}
+
+.footer-brand .navbar-logo-stack .logo-heart {
+  color: var(--c-brand-primary) !important;
+  filter: blur(1.5px) !important;
+  transform: scale(0.95);
+}
+
+.footer-brand span:not(.navbar-logo-stack),
+.footer-brand .footer-brand-title {
+  font-family: var(--font-title) !important;
+  font-size: 2.2rem !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+.footer-brand:hover span:not(.navbar-logo-stack),
+.footer-brand:hover .footer-brand-title {
+  color: var(--c-brand-primary) !important;
+}
+
+/* Tagline del footer */
+.premium-footer .footer-tagline {
+  color: #c5d4e2 !important;
+  font-size: 0.92rem !important;
+  line-height: 1.65;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  max-width: 440px;
+}
+
+/* Redes Sociales del footer */
+.premium-footer .footer-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.premium-footer .footer-social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #FFFFFF !important;
+  font-size: 1.1rem;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.premium-footer .footer-social-icons a:hover {
+  background: var(--c-brand-primary);
+  color: var(--c-brand-dark) !important;
+  border-color: var(--c-brand-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(232, 196, 176, 0.35);
+}
+
+/* Encabezados del footer: Limpios, sobrios y sin barras inferiores */
+.premium-footer .footer-heading {
+  color: #FFFFFF !important;
+  font-family: var(--font-base) !important;
+  font-weight: 700 !important;
+  font-size: 1.15rem !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  margin-bottom: 20px !important;
+  position: static !important;
+  display: block !important;
+}
+
+.premium-footer .footer-heading::after,
+.footer-heading::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Enlaces de navegación */
+.premium-footer .footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.premium-footer .footer-links li {
+  margin-bottom: 9px;
+}
+
+.premium-footer .footer-links a {
+  color: #c9d7e5 !important;
+  font-size: 0.91rem;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.premium-footer .footer-links a:hover {
+  color: var(--c-brand-primary) !important;
+  transform: translateX(3px);
+}
+
+/* Información de contacto */
+.premium-footer .footer-contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.premium-footer .footer-contact-info li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 11px;
+  color: #c9d7e5;
+  font-size: 0.91rem;
+}
+
+.premium-footer .footer-contact-info li i {
+  color: var(--c-brand-primary);
+  margin-top: 3px;
+  margin-right: 10px;
+  font-size: 0.98rem;
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.premium-footer .footer-contact-info li a {
+  color: #c9d7e5 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+.premium-footer .footer-contact-info li a:hover {
+  color: var(--c-brand-primary) !important;
+}
+
+.premium-footer .footer-email-link {
+  word-break: break-all;
+}
+
+/* Copyright y base del footer */
+.premium-footer .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 22px;
+  padding-bottom: 6px;
+  margin-top: 28px;
+  color: #92a8bd;
+  font-size: 0.86rem;
+}
+
+/* Reglas responsivas dedicadas para móviles */
+@media (max-width: 767.98px) {
+  .premium-footer .footer-brand {
+    justify-content: center !important;
+    width: 100%;
+  }
+
+  .premium-footer .footer-tagline {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: 0.88rem !important;
+  }
+
+  .premium-footer .footer-social-icons {
+    justify-content: center !important;
+  }
+
+  .premium-footer .footer-heading {
+    font-size: 0.98rem !important;
+    margin-bottom: 14px;
+  }
+
+  .premium-footer .footer-links a {
+    font-size: 0.85rem !important;
+  }
+
+  .premium-footer .footer-contact-info li {
+    font-size: 0.84rem !important;
+    margin-bottom: 10px;
+  }
+
+  .premium-footer .footer-bottom p {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* La píldora flotante redundante se desactiva: la bandeja está integrada en el dock móvil y en el header de PC */
+.bandeja-antojos-sticky {
+  display: none !important;
+}
+
+@media (max-width: 767.98px) {
+  .whatsapp-float {
+    bottom: 74px !important;
+    right: 16px !important;
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 24px !important;
+    z-index: 1020 !important;
+  }
+  #cocobot-widget {
+    bottom: 74px !important;
+    left: 16px !important;
+    z-index: 1020 !important;
+  }
+  #cocobot-toggler {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 24px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .whatsapp-float {
+    bottom: 26px !important;
+    right: 28px !important;
+    width: 56px !important;
+    height: 56px !important;
+    font-size: 28px !important;
+    z-index: 1020 !important;
+  }
+  .premium-footer {
+    padding-bottom: 100px !important;
+  }
+}
+
+  .antojos-title {
+    font-size: 2.5rem !important;
+  }
+
+  .pastry-circle-frame,
+  .boutique-img-ring,
+  .boutique-product-img-wrapper {
+    width: 175px !important;
+    height: 175px !important;
+  }
+
+  body {
+    padding-bottom: 65px;
+  }
+
+
+/* ==========================================================================
+   8. RAPPI-STYLE CATEGORY PILLS BAR (Scroll horizontal de categorias)
+   ========================================================================== */
+
+.app-category-bar-wrapper {
+  background: var(--c-brand-white);
+  border-bottom: 1px solid var(--c-brand-secondary);
+  position: sticky;
+  top: 73px;
+  z-index: 1015;
+  box-shadow: 0 4px 12px rgba(46, 64, 87, 0.04);
+}
+
+.app-category-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 12px 0;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.app-category-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.app-category-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--c-brand-cream);
+  color: var(--c-brand-dark) !important;
+  border: 1.5px solid var(--c-brand-border);
+  border-radius: var(--radius-pill);
+  padding: 8px 18px;
+  font-family: var(--font-base);
+  font-size: 0.92rem;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.app-category-pill:hover,
+.app-category-pill.active {
+  background: var(--c-brand-dark);
+  color: #FFFFFF !important;
+  border-color: var(--c-brand-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-brand-sm);
+}
+
+.app-category-pill i {
+  color: var(--c-brand-primary);
+}
+
+.app-category-pill:hover i,
+.app-category-pill.active i {
+  color: var(--c-brand-primary);
+}
+
+/* ==========================================================================
+   9. PASTEL BUILDER INTERACTIVO (FASE 3 - CONFIGURADOR SAAS)
+   ========================================================================== */
+
+.seccion-builder {
+  background: linear-gradient(180deg, var(--c-brand-cream) 0%, var(--c-brand-white) 100%);
+  padding: 80px 0 95px 0;
+  border-top: 1px solid var(--c-brand-secondary);
+  border-bottom: 1px solid var(--c-brand-secondary);
+}
+
+.builder-header {
+  text-align: center;
+  max-width: 740px;
+  margin: 0 auto 45px auto;
+}
+
+.builder-panel-card {
+  background: var(--c-brand-white);
+  border: 1px solid var(--c-brand-border);
+  border-radius: 24px;
+  padding: 35px 30px;
+  box-shadow: var(--shadow-brand-md);
+}
+
+.builder-step-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.builder-step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--c-brand-dark);
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.builder-step-title {
+  font-family: var(--font-base);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--c-brand-dark);
+  margin: 0;
+}
+
+/* Tarjetas de Porciones / Tamaño */
+.builder-tamano-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.builder-tamano-card {
+  background: var(--c-brand-cream);
+  border: 2px solid var(--c-brand-border);
+  border-radius: 16px;
+  padding: 16px 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.builder-tamano-card:hover {
+  border-color: var(--c-brand-primary);
+  transform: translateY(-3px);
+}
+
+.builder-tamano-card.active {
+  background: #FFF;
+  border-color: var(--c-brand-dark);
+  box-shadow: 0 6px 18px rgba(46, 64, 87, 0.15);
+}
+
+.builder-tamano-card.active::after {
+  content: "✓";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  background: var(--c-brand-dark);
+  color: #FFF;
+  border-radius: 50%;
+  font-size: 0.72rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.builder-tamano-icon-box {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px auto;
+  border: 2px solid var(--c-brand-border);
+  box-shadow: var(--shadow-brand-sm);
+  color: var(--c-brand-dark);
+  transition: all 0.3s ease;
+}
+
+.builder-tamano-card:hover .builder-tamano-icon-box,
+.builder-tamano-card.active .builder-tamano-icon-box {
+  background: var(--c-brand-secondary);
+  border-color: var(--c-brand-primary);
+  transform: scale(1.08);
+}
+
+.builder-tamano-badge-sub {
+  font-size: 0.74rem;
+  color: var(--c-brand-dark);
+  background: var(--c-brand-secondary);
+  padding: 3px 8px;
+  border-radius: 999px;
+  display: inline-block;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.builder-tamano-nombre {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--c-brand-dark);
+  margin-bottom: 2px;
+}
+
+.builder-tamano-porciones {
+  font-size: 0.82rem;
+  color: #666;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.builder-tamano-precio {
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--c-brand-dark);
+}
+
+/* Pildoras de seleccion para pan y relleno */
+.builder-pills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.builder-pan-pill,
+.builder-relleno-pill {
+  background: var(--c-brand-cream);
+  border: 1.5px solid var(--c-brand-border);
+  border-radius: var(--radius-pill);
+  padding: 9px 18px;
+  font-family: var(--font-base);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--c-brand-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.builder-pan-pill:hover,
+.builder-relleno-pill:hover {
+  border-color: var(--c-brand-primary);
+}
+
+.builder-pan-pill.active,
+.builder-relleno-pill.active {
+  background: var(--c-brand-dark);
+  color: #FFFFFF;
+  border-color: var(--c-brand-dark);
+  box-shadow: var(--shadow-brand-sm);
+}
+
+/* Caja de Resumen en Vivo (Sticky Desktop) */
+.builder-summary-card {
+  background: var(--c-brand-cream);
+  border: 2px solid var(--c-brand-primary);
+  border-radius: 24px;
+  padding: 30px 24px;
+  box-shadow: var(--shadow-brand-md);
+  position: sticky;
+  top: 140px;
+}
+
+.builder-summary-title {
+  font-family: var(--font-title);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--c-brand-dark);
+  margin-bottom: 18px;
+  border-bottom: 1px dashed #e4d0c5;
+  padding-bottom: 12px;
+}
+
+.builder-summary-img-preview {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid #FFF;
+  box-shadow: var(--shadow-brand-sm);
+  object-fit: cover;
+  margin: 0 auto 20px auto;
+  display: block;
+}
+
+.builder-summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 0.92rem;
+  border-bottom: 1px solid rgba(232, 196, 176, 0.3);
+  padding-bottom: 8px;
+}
+
+.builder-summary-label {
+  color: #666;
+  font-weight: 500;
+}
+
+.builder-summary-val {
+  color: var(--c-brand-dark);
+  font-weight: 700;
+  text-align: right;
+  max-width: 60%;
+}
+
+.builder-summary-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 22px;
+  padding-top: 12px;
+  border-top: 2px solid var(--c-brand-dark);
+}
+
+.builder-summary-total-price {
+  font-family: var(--font-base);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--c-brand-dark);
+}
+
+/* ==========================================================================
+   10. APP SLIDE-OUT DRAWER (Menú lateral de la Repostería para About/Contacto)
+   ========================================================================== */
+
+.app-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(46, 64, 87, 0.65);
+  backdrop-filter: blur(5px);
+  z-index: 100000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.app-drawer-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.app-slide-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 400px;
+  background: #FFF;
+  z-index: 100005;
+  box-shadow: -10px 0 40px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.app-drawer-overlay.open .app-slide-drawer {
+  transform: translateX(0);
+}
+
+.app-drawer-header {
+  padding: 24px;
+  background: var(--c-brand-secondary);
+  border-bottom: 1px solid var(--c-brand-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-drawer-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.app-drawer-link-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--c-brand-cream);
+  border-radius: 16px;
+  margin-bottom: 12px;
+  text-decoration: none !important;
+  color: var(--c-brand-dark) !important;
+  transition: all 0.2s ease;
+  border: 1px solid var(--c-brand-border);
+}
+
+.app-drawer-link-card:hover {
+  background: var(--c-brand-secondary);
+  transform: translateX(-4px);
+}
+
+.app-drawer-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--c-brand-dark);
+  box-shadow: var(--shadow-brand-sm);
+}
+
+/* ==========================================================================
+   11. MOBILE-FIRST RESPONSIVENESS & TOUCH UX/UI OPTIMIZATION
+   ========================================================================== */
+
+/* Prevenir scroll horizontal accidental en cualquier móvil */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Soporte para áreas seguras en pantallas con notch (iPhone X - 16) */
+:root {
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+}
+
+/* Tablets y pantallas medianas (<= 991px) */
+@media (max-width: 991.98px) {
+  .builder-summary-card {
+    position: static !important;
+    top: auto !important;
+    margin-top: 24px;
+    box-shadow: var(--shadow-brand-md);
+  }
+}
+
+/* Teléfonos y dispositivos móviles (<= 767.98px) */
+@media (max-width: 767.98px) {
+  body {
+    padding-bottom: 0 !important;
+  }
+  .premium-footer {
+    padding-bottom: 82px !important;
+  }
+
+  /* Top bar compacta y cerrable */
+  .top-bar {
+    padding: 4px 0 !important;
+    font-size: 0.78rem !important;
+  }
+  .top-bar .container {
+    padding: 0 12px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  .top-social {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+  }
+
+  /* Header principal */
+  .header_section.premium-header {
+    padding: 6px 0 !important;
+  }
+  .header_section.premium-header .container {
+    padding: 0 12px;
+  }
+  .navbar-brand {
+    font-size: 24px !important;
+  }
+  .navbar-brand .logo-heart {
+    transform: scale(0.85);
+  }
+
+  /* Hero de bienvenida en móvil (desahogado y estilizado) */
+  .app-store-hero {
+    padding: 18px 0 14px 0 !important;
+  }
+  .app-store-hero .container {
+    padding: 0 14px;
+  }
+  .store-greeting-kicker {
+    font-size: 0.8rem !important;
+    margin-bottom: 2px !important;
+  }
+  .store-greeting-title {
+    font-size: 2.3rem !important;
+    line-height: 1.15 !important;
+    margin-bottom: 4px !important;
+  }
+  .store-greeting-subtitle {
+    font-size: 0.86rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 12px !important;
+  }
+  .app-chips-scroll {
+    padding: 2px 0 6px 0 !important;
+    gap: 6px !important;
+  }
+  .app-chip {
+    padding: 6px 12px !important;
+    font-size: 0.78rem !important;
+  }
+
+  /* Vitrina de antojos: cuadrícula de 2 columnas con respiro y marco visible */
+  .seccion-antojos {
+    padding: 16px 0 60px 0 !important;
+  }
+  .seccion-antojos .container {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+  #gridAntojos {
+    margin-left: -5px !important;
+    margin-right: -5px !important;
+  }
+  #gridAntojos .rebanada-col {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    margin-bottom: 12px !important;
+  }
+  .antojos-header {
+    margin-bottom: 14px !important;
+  }
+  .antojos-tag-pill {
+    font-size: 0.72rem;
+    padding: 4px 12px;
+  }
+  .antojos-title {
+    font-size: 2.1rem !important;
+    line-height: 1.15 !important;
+    margin-bottom: 2px !important;
+  }
+  .antojos-subtitle {
+    font-size: 0.82rem !important;
+    line-height: 1.35 !important;
+    color: #66758c !important;
+    padding: 0 4px;
+    margin-bottom: 0 !important;
+  }
+
+  /* Tarjeta de Rebanada en cuadrícula móvil de 2 columnas */
+  .rebanada-card {
+    padding: 12px 10px 14px 10px !important;
+    border-radius: 18px !important;
+    box-shadow: 0 4px 14px rgba(46, 64, 87, 0.08) !important;
+    background: #FFFFFF !important;
+    border: 1.5px solid #eadad0 !important;
+  }
+  .pastry-circle-frame.compact {
+    width: 96px !important;
+    height: 96px !important;
+    margin-bottom: 8px !important;
+    border-width: 3px !important;
+  }
+  .rebanada-badge {
+    top: 7px !important;
+    right: 7px !important;
+    font-size: 0.62rem !important;
+    padding: 2px 7px !important;
+  }
+  .rebanada-name {
+    font-size: 1.25rem !important;
+    line-height: 1.15 !important;
+    margin-bottom: 4px !important;
+    min-height: 2.5rem;
+    display: block !important;
+    overflow: visible !important;
+    -webkit-line-clamp: unset !important;
+  }
+  .rebanada-desc {
+    font-size: 0.76rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+    overflow: visible !important;
+    -webkit-line-clamp: unset !important;
+    -webkit-box-orient: unset !important;
+    color: #66758c !important;
+    min-height: auto;
+  }
+  .rebanada-footer {
+    padding-top: 8px !important;
+    gap: 8px !important;
+  }
+  .rebanada-price-row {
+    flex-direction: column !important;
+    gap: 6px !important;
+    align-items: center !important;
+  }
+  .rebanada-price {
+    font-size: 1.15rem !important;
+  }
+  .qty-control {
+    transform: scale(0.88);
+  }
+  .btn-add-antojo {
+    padding: 8px 6px !important;
+    font-size: 0.76rem !important;
+    min-height: 38px !important;
+    border-radius: 999px !important;
+    gap: 4px;
+    letter-spacing: 0.2px;
+  }
+
+  /* Constructor de pasteles (disenar.html) en móvil */
+  .seccion-builder {
+    padding: 14px 0 45px 0 !important;
+  }
+  .seccion-builder .container {
+    padding: 0 10px;
+  }
+  .builder-card-container {
+    padding: 18px 12px !important;
+    border-radius: 16px !important;
+  }
+  .builder-step-header {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .builder-step-num {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+  }
+  .builder-step-title {
+    font-size: 1.05rem;
+  }
+
+  /* Grid compacto y ultra responsivo para tamaños en móvil */
+  .builder-tamano-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+    margin-bottom: 18px !important;
+  }
+  .builder-tamano-card {
+    padding: 10px 4px 8px 4px !important;
+    border-radius: 14px !important;
+    border-width: 1.5px !important;
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .builder-tamano-card.active {
+    box-shadow: 0 4px 12px rgba(46, 64, 87, 0.12) !important;
+  }
+  .builder-tamano-card.active::after {
+    width: 16px !important;
+    height: 16px !important;
+    font-size: 0.60rem !important;
+    top: 4px !important;
+    right: 4px !important;
+  }
+  .builder-tamano-icon-box {
+    width: 40px !important;
+    height: 40px !important;
+    margin: 0 auto 5px auto !important;
+    border-width: 1.5px !important;
+  }
+  .builder-tamano-icon-box svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+  .builder-tamano-nombre {
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    line-height: 1.15 !important;
+    margin-bottom: 2px !important;
+  }
+  .builder-tamano-porciones {
+    font-size: 0.70rem !important;
+    line-height: 1.15 !important;
+    margin-bottom: 3px !important;
+  }
+  .builder-tamano-badge-sub {
+    font-size: 0.60rem !important;
+    padding: 1px 5px !important;
+    line-height: 1.3 !important;
+    margin-top: 2px !important;
+  }
+  .builder-pills-grid {
+    gap: 8px !important;
+    margin-bottom: 20px !important;
+  }
+  .builder-pan-pill,
+  .builder-relleno-pill {
+    padding: 8px 14px !important;
+    font-size: 0.82rem !important;
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Prevenir zoom automático en iOS al tocar inputs */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+
+  /* Modal Cajita de compras en móvil */
+  .cajita-modal-panel {
+    width: 95vw !important;
+    max-width: 440px !important;
+    border-radius: 20px !important;
+    max-height: 88vh !important;
+  }
+  .cajita-header {
+    padding: 16px 18px !important;
+  }
+  .cajita-header-title h4 {
+    font-size: 1.65rem !important;
+  }
+  .cajita-body {
+    padding: 14px 16px !important;
+    max-height: calc(85vh - 170px) !important;
+  }
+  .cajita-item-row {
+    gap: 10px !important;
+    padding: 10px 0 !important;
+  }
+  .cajita-item-img {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  .cajita-item-nombre {
+    font-size: 1.15rem !important;
+  }
+  .cajita-item-precio {
+    font-size: 0.78rem !important;
+  }
+  .cajita-footer {
+    padding: 14px 18px !important;
+  }
+  .btn-pedir-cajita-wa {
+    min-height: 46px !important;
+    font-size: 0.92rem !important;
+    padding: 10px 16px !important;
+  }
+
+  /* Slide drawer en móvil */
+  .app-slide-drawer {
+    max-width: 86vw !important;
+  }
+  .app-drawer-header {
+    padding: 18px 20px !important;
+  }
+  .app-drawer-body {
+    padding: 18px 16px !important;
+  }
+  .app-drawer-link-card {
+    padding: 12px 14px !important;
+    gap: 12px !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* Barra inferior fija */
+  .app-bottom-nav {
+    height: 60px !important;
+    padding: 4px 6px calc(6px + var(--sab)) !important;
+  }
+  .app-bottom-nav-item {
+    padding: 4px 2px !important;
+    min-height: 44px !important;
+  }
+  .app-bottom-nav-item .nav-icon-wrap {
+    width: 24px !important;
+    height: 22px !important;
+  }
+  .app-bottom-nav-item .nav-icon-wrap i {
+    font-size: 1.18rem !important;
+  }
+  .app-bottom-nav-item span.nav-label {
+    font-size: 0.68rem !important;
+  }
+
+  /* Botón flotante de WhatsApp */
+  .whatsapp-float {
+    bottom: 74px !important;
+    right: 14px !important;
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 24px !important;
+  }
+  .whatsapp-float-msg {
+    display: none !important;
+  }
+
+  /* Catálogo de productos en móvil (2 columnas) */
+  .boutique-category-section {
+    margin-bottom: 28px !important;
+    padding-bottom: 12px !important;
+  }
+  .boutique-category-title {
+    font-size: 2.2rem !important;
+  }
+  .boutique-product-img-wrapper {
+    width: 120px !important;
+    height: 120px !important;
+    border-width: 3px !important;
+  }
+  .product-name {
+    font-size: 0.92rem !important;
+    line-height: 1.25 !important;
+  }
+  .boutique-modal-content {
+    padding: 24px 16px !important;
+    width: 94% !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+  }
+  .boutique-modal-img-wrapper {
+    width: 140px !important;
+    height: 140px !important;
+  }
+  .boutique-modal-title {
+    font-size: 2rem !important;
+    text-align: center;
+  }
+  .boutique-modal-desc {
+    font-size: 0.9rem !important;
+    text-align: center;
+  }
+  .boutique-modal-actions {
+    text-align: center;
+  }
+
+  /* Secciones About y Contacto en móvil */
+  .boutique-about-content,
+  .boutique-features-section,
+  .boutique-values-section,
+  .boutique-contact-section {
+    padding: 35px 0 !important;
+  }
+  .about-text-wrapper p {
+    font-size: 0.92rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 18px !important;
+  }
+  .about-text-wrapper .highlight {
+    font-size: 1.45rem !important;
+    margin: 25px 0 !important;
+  }
+  .boutique-contact-title {
+    font-size: 2.2rem !important;
+  }
+  .boutique-contact-text {
+    font-size: 0.92rem !important;
+  }
+  .boutique-contact-info-card {
+    padding: 22px 18px !important;
+  }
+  .boutique-mega-btn {
+    padding: 16px 14px !important;
+    gap: 12px !important;
+  }
+
+  /* Footer en móvil */
+  .footer_section {
+    padding: 30px 0 20px 0 !important;
+  }
+  .footer_section h4 {
+    font-size: 1.6rem !important;
+    margin-bottom: 12px !important;
+  }
+}
+
+/* Pantallas extra pequeñas (<= 380px: iPhone SE, Galaxy Z Flip, etc.) */
+@media (max-width: 380px) {
+  .navbar-brand {
+    font-size: 21px !important;
+  }
+  .pastry-circle-frame.compact {
+    width: 82px !important;
+    height: 82px !important;
+  }
+  .rebanada-name {
+    font-size: 1.15rem !important;
+  }
+  .rebanada-price {
+    font-size: 1.05rem !important;
+  }
+  .app-chip {
+    padding: 6px 11px !important;
+    font-size: 0.76rem !important;
+  }
+  .store-greeting-title {
+    font-size: 2.2rem !important;
+  }
+  .builder-tamano-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 6px !important;
+  }
+}

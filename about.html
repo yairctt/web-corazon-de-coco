@@ -39,212 +39,240 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+  <!-- Luxury Patisserie Design System (Fases 1 & 2) -->
+  <link href="css/reposteria-luxury.css" rel="stylesheet" />
+
   <!-- Vercel Web Analytics -->
   <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
-
 </head>
 
-<body class="sub_page">
+<body>
 
-  <div class="hero_area">
+  <!-- Top Announcement Bar (Status App) -->
+  <div class="top-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="top-contact d-flex align-items-center">
+        <span class="mr-3" style="font-size: 0.85rem; color: #e2ebf4;">
+          <i class="fa fa-map-marker text-white mr-1"></i> Cosamaloapan, Veracruz
+        </span>
+        <a href="tel:+522881409816" class="d-none d-md-inline"><i class="fa fa-phone mr-1"></i> +52 288 140 9816</a>
+      </div>
+      <div class="top-social d-flex align-items-center">
+        <span style="font-size: 0.85rem; color: var(--c-brand-primary);">Pedidos con 3 días de anticipación</span>
+        <button type="button" class="top-bar-close-btn" onclick="cerrarTopBar()" title="Cerrar notificación" aria-label="Cerrar notificación">&times;</button>
+      </div>
+    </div>
+  </div>
+  <!-- end top bar section -->
 
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index">
-            <span>
-              Corazón de Coco
-            </span>
-          </a>
+  <!-- Header SaaS / E-Commerce App -->
+  <header class="header_section premium-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg custom_nav-container p-0">
+        <!-- Logo Oficial de la Marca -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <span class="fa-stack navbar-logo-stack mr-2">
+            <i class="fa fa-heart fa-stack-2x logo-heart"></i>
+          </span>
+          <span>Corazón de Coco</span>
+        </a>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class=""> </span>
+        <!-- Acciones Rápidas del Navbar (Bandeja y Menú) -->
+        <div class="d-flex align-items-center ml-auto">
+          <!-- Botón Bandeja de Compras -->
+          <button type="button" class="btn btn-sm mr-2" onclick="abrirModalCajita()" style="background: #e8c4b0; color: #2E4057; font-weight: 700; border-radius: 999px; padding: 7px 14px; position: relative;" title="Ver Bandeja Dulce">
+            <i class="fa fa-shopping-basket"></i> <span class="d-none d-sm-inline ml-1">Bandeja</span>
+            <span class="badge badge-pill badge-danger header-cart-badge d-none" style="position: absolute; top: -6px; right: -6px; background: #e06d53; font-size: 0.72rem;">0</span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav  ">
-              <li class="nav-item ">
-                <a class="nav-link" href="index">Inicio</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="about"> Acerca de <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="product">Productos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact">Contáctanos</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-  </div>
-
-  <!-- Elementos decorativos de fondo -->
-  <div class="decorative-elements deco-1">🍰</div>
-  <div class="decorative-elements deco-2">🧁</div>
-
-  <!-- about section -->
-
-  <section class="about_section layout_padding">
-    <div class="container  ">
-
-      <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="images/Logo.png" alt="">
-          </div>
+          <!-- Botón Menú Lateral (Drawer) -->
+          <button type="button" class="btn btn-sm" onclick="abrirAppDrawer()" style="background: #fcf9f5; border: 1.5px solid #2E4057; color: #2E4057; border-radius: 999px; padding: 7px 12px;" aria-label="Abrir Menú">
+            <i class="fa fa-bars" style="font-size: 1.1rem;"></i>
+          </button>
         </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                Sobre Nosotros
-              </h2>
-            </div>
-            <p>
-              En Corazón de Coco creemos que cada postre cuenta una historia. Somos una repostería artesanal dedicada a
-              crear sabores únicos, combinando ingredientes frescos con un toque casero que enamora.
-              Nuestro compromiso es ofrecer calidad, creatividad y ese sabor especial que te hace volver.
-            </p>
-          </div>
-        </div>
-      </div>
+      </nav>
     </div>
+  </header>
+  <!-- end header section -->
 
-    <!-- Nueva sección de características -->
+  <!-- Header Minimalista Estilo UberEats (Mobile First) -->
+  <section class="app-store-hero">
     <div class="container">
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">🎨</div>
-          <h3>Creaciones Únicas</h3>
-          <p>Cada pastel es una obra de arte diseñada especialmente para ti y tus momentos más especiales.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🥥</div>
-          <h3>Ingredientes Frescos</h3>
-          <p>Usamos solo los mejores ingredientes naturales para garantizar sabor y calidad en cada bocado.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">💝</div>
-          <h3>Hecho con Amor</h3>
-          <p>Ponemos el corazón en cada preparación, porque tu felicidad es nuestra mayor satisfacción.</p>
-        </div>
-      </div>
-    </div>
+      <div class="d-flex flex-column align-items-start">
+        <span class="store-greeting-kicker">Conócenos</span>
+        <h1 class="store-greeting-title">Nuestra Historia</h1>
+        <p class="store-greeting-subtitle">
+          El corazón y la técnica profesional detrás de cada una de nuestras creaciones de alta repostería internacional.
+        </p>
 
-    <!-- Nueva sección de valores -->
-    <div class="container">
-      <div class="values-section">
-        <h2>Nuestros Valores</h2>
-        <div class="values-grid">
-          <div class="value-item">
-            <div class="value-icon">✨</div>
-            <div class="value-content">
-              <h4>Calidad Premium</h4>
-              <p>No comprometemos la calidad. Cada ingrediente es seleccionado cuidadosamente para crear postres
-                excepcionales.</p>
-            </div>
-          </div>
-          <div class="value-item">
-            <div class="value-icon">🌟</div>
-            <div class="value-content">
-              <h4>Pasión Artesanal</h4>
-              <p>Mantenemos viva la tradición de la repostería casera, con técnicas que realzan el sabor auténtico.</p>
-            </div>
-          </div>
-          <div class="value-item">
-            <div class="value-icon">🎯</div>
-            <div class="value-content">
-              <h4>Atención Personalizada</h4>
-              <p>Cada cliente es único. Escuchamos tus ideas y las convertimos en dulces realidades memorables.</p>
-            </div>
-          </div>
-          <div class="value-item">
-            <div class="value-icon">🤝</div>
-            <div class="value-content">
-              <h4>Compromiso Contigo</h4>
-              <p>Tu satisfacción es nuestra prioridad. Trabajamos hasta que cada detalle sea perfecto.</p>
-            </div>
-          </div>
+        <!-- Pastillas / Chips de Acceso Rápido -->
+        <div class="app-chips-scroll w-100">
+          <a href="index.html#antojos" class="app-chip">
+            <i class="fa fa-cutlery"></i> Rebanadas del Día
+          </a>
+          <a href="disenar.html" class="app-chip">
+            <i class="fa fa-magic"></i> Diseñar Pastel
+          </a>
+          <a href="contact.html" class="app-chip">
+            <i class="fa fa-map-marker"></i> Ubicación & Contacto
+          </a>
         </div>
       </div>
     </div>
-
-
-
   </section>
 
-  <!-- end about section -->
+  <!-- boutique about content -->
+  <section class="boutique-about-content">
+    <div class="container">
+      <div class="about-text-wrapper">
+        <span class="highlight">"Nuestra pasión nació de un sueño: transformar la repostería en una experiencia de lujo."</span>
+        <p>
+          En Corazón de Coco, hemos evolucionado para ofrecerte lo mejor de la alta repostería internacional. Creemos firmemente que un pastel no solo debe ser un postre, sino la pieza central que corone tus celebraciones más importantes.
+        </p>
+        <p>
+          Nuestro enfoque se basa en el diseño exclusivo, la estética impecable y la combinación de sabores sofisticados. Cada una de nuestras creaciones está diseñada a la medida, garantizando que tu evento cuente con una obra maestra visualmente deslumbrante y de calidad premium.
+        </p>
+      </div>
+    </div>
+  </section>
 
-  <!-- footer section -->
-  <footer class="footer_section">
+  <!-- Misión y Visión -->
+  <section class="boutique-features-section">
     <div class="container">
       <div class="row justify-content-center">
-
-        <div class="col-md-4 footer-col">
-          <div class="footer_contact">
-            <h4>
-              Contáctanos en..
-            </h4>
-            <div class="contact_link_box">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  Ubicación - Cosamaloapan, Veracruz.
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Llámanos: +52 2881409816
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  aurachavezfri@outlook.com
-                </span>
-              </a>
+        <!-- Misión -->
+        <div class="col-md-5 mb-4">
+          <div class="boutique-value-card flex-column text-center align-items-center" style="padding: 40px 30px;">
+            <div class="value-icon-wrapper mb-3 mx-auto" style="margin-right: 0; width: 80px; height: 80px;">
+              <i class="fa fa-bullseye value-icon" style="font-size: 2rem;"></i>
             </div>
+            <h3 class="value-title" style="font-size: 1.8rem; margin-bottom: 15px; font-family: var(--font-title); color: var(--color-primary);">Nuestra Misión</h3>
+            <p class="value-desc" style="font-size: 1.05rem;">Crear postres exclusivos que combinen la elegancia del diseño de vanguardia con sabores de talla internacional, convirtiendo las celebraciones de nuestros clientes en recuerdos estéticamente inolvidables.</p>
           </div>
         </div>
-
-        <div class="col-md-4 footer-col">
-          <div class="footer_detail">
-            <a href="" class="footer-logo">
-              Corazón de Coco
-            </a>
-            <p>
-              Pasteles y postres artesanales hechos con amor.
-            </p>
-            <div class="footer_social">
-              <a href="https://www.facebook.com/profile.php?id=61573250580017">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a
-                href="https://api.whatsapp.com/send?phone=%2B5212881409816&fbclid=IwY2xjawOnPWVleHRuA2FlbQIxMABicmlkETFZY3lIUlRxS1hMeGdXWU5Ec3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHssEtixjd5iVAWxxys-EcsESbyMvWX2rii_MtvKInAvLHo_wCsoxJeN8HjtS_aem_uVgq52IVgVE_6I8hSvAmIg">
-                <i class="fa fa-whatsapp" aria-hidden="true"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/corazon_de_cooco?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
+        <!-- Visión -->
+        <div class="col-md-5 mb-4">
+          <div class="boutique-value-card flex-column text-center align-items-center" style="padding: 40px 30px;">
+            <div class="value-icon-wrapper mb-3 mx-auto" style="margin-right: 0; width: 80px; height: 80px;">
+              <i class="fa fa-diamond value-icon" style="font-size: 2rem;"></i>
             </div>
+            <h3 class="value-title" style="font-size: 1.8rem; margin-bottom: 15px; font-family: var(--font-title); color: var(--color-primary);">Nuestra Visión</h3>
+            <p class="value-desc" style="font-size: 1.05rem;">Ser la repostería boutique de referencia indiscutible, reconocida por establecer nuevos estándares de belleza, lujo y excelencia gastronómica en la alta repostería.</p>
           </div>
         </div>
-
       </div>
+    </div>
+  </section>
 
-      <div class="footer-info">
-        <p>
-          &copy; <span id="displayYear"></span> Todos los derechos reservados
-        </p>
+  <!-- boutique values -->
+  <section class="boutique-values-section">
+    <div class="container">
+      <div class="heading_container heading_center mb-5">
+        <h2 class="boutique-title" style="font-size: 3rem; color: var(--color-primary); font-family: var(--font-title);">Valores de la Empresa</h2>
+      </div>
+      <div class="row">
+        <!-- Value 1 -->
+        <div class="col-md-6 mb-4">
+          <div class="boutique-value-card">
+            <div class="value-icon-wrapper">
+              <i class="fa fa-star value-icon"></i>
+            </div>
+            <div>
+              <h4 class="value-title">Excelencia Absoluta</h4>
+              <p class="value-desc">No comprometemos la calidad. Utilizamos únicamente ingredientes premium para lograr acabados finos y texturas impecables.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Value 2 -->
+        <div class="col-md-6 mb-4">
+          <div class="boutique-value-card">
+            <div class="value-icon-wrapper">
+              <i class="fa fa-magic value-icon"></i>
+            </div>
+            <div>
+              <h4 class="value-title">Diseño Vanguardista</h4>
+              <p class="value-desc">Nuestra técnica abraza la innovación. Creamos estilos modernos, estéticos y visualmente deslumbrantes para tu evento.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Value 3 -->
+        <div class="col-md-6 mb-4">
+          <div class="boutique-value-card">
+            <div class="value-icon-wrapper">
+              <i class="fa fa-user-circle value-icon"></i>
+            </div>
+            <div>
+              <h4 class="value-title">Atención Exclusiva</h4>
+              <p class="value-desc">Ofrecemos un servicio VIP. Escuchamos las ideas de cada cliente para planificar y entregar una obra de arte personalizada.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Value 4 -->
+        <div class="col-md-6 mb-4">
+          <div class="boutique-value-card">
+            <div class="value-icon-wrapper">
+              <i class="fa fa-check-circle value-icon"></i>
+            </div>
+            <div>
+              <h4 class="value-title">Compromiso con la Perfección</h4>
+              <p class="value-desc">Cuidamos el más mínimo detalle en la arquitectura y el diseño del pastel, garantizando siempre resultados extraordinarios.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Oficial Unificado -->
+  <footer class="premium-footer">
+    <div class="container">
+      <div class="row pt-5 pb-2">
+        <div class="col-lg-5 col-md-5 col-12 mb-4 mb-md-0 text-center text-md-left">
+          <a href="index.html" class="footer-brand d-inline-flex align-items-center mb-2">
+            <span class="fa-stack navbar-logo-stack mr-2" style="font-size: 1.1rem;">
+              <i class="fa fa-heart fa-stack-2x logo-heart"></i>
+            </span>
+            <span class="footer-brand-title" style="font-family: var(--font-title); font-size: 2.2rem; color: #FFFFFF !important; font-weight: 700;">Corazón de Coco</span>
+          </a>
+          <p class="footer-tagline">
+            Alta repostería internacional y diseños personalizados hechos con el corazón en Cosamaloapan, Veracruz.
+          </p>
+          <div class="footer-social-icons mt-3">
+            <a href="https://www.facebook.com/profile.php?id=61573250580017" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+            <a href="https://wa.me/5212881409816" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/corazon_de_cooco" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-6 mb-4 mb-md-0 text-left">
+          <h5 class="footer-heading">Navegación</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Rebanadas del Día</a></li>
+            <li><a href="disenar.html">Diseñar Pastel</a></li>
+            <li><a href="product.html">Catálogo Completo</a></li>
+            <li><a href="about.html">Nuestra Historia</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4 col-6 mb-4 mb-md-0 text-left">
+          <h5 class="footer-heading">Contacto</h5>
+          <ul class="footer-contact-info">
+            <li>
+              <i class="fa fa-map-marker"></i>
+              <span>Cosamaloapan, Ver.</span>
+            </li>
+            <li>
+              <i class="fa fa-phone"></i>
+              <a href="tel:+522881409816">+52 288 140 9816</a>
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i>
+              <a href="mailto:aurachavezfri@gmail.com" class="footer-email-link">aurachavezfri@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p class="mb-0" onclick="checkSecretAdminTap()" style="cursor: default; user-select: none;">&copy; <span id="displayYear"></span> Corazón de Coco. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>
@@ -275,6 +303,136 @@
   </script>
   <!-- End Google Map -->
 
+  <!-- CocoBot Widget -->
+  <link href="css/cocobot.css" rel="stylesheet" />
+  <script src="js/cocobot.js"></script>
+
+  <!-- Motor de Rebanadas & Bandeja de Antojos (Fase 2) -->
+  <script src="js/antojos.js"></script>
+
+  <!-- Barra de Opciones Inferior Estilo Rappi (Bottom App Bar) -->
+  <nav class="app-bottom-nav" aria-label="Navegación principal">
+    <a href="index.html" class="app-bottom-nav-item">
+      <div class="nav-icon-wrap"><i class="fa fa-home"></i></div>
+      <span class="nav-label">Inicio</span>
+    </a>
+    <a href="disenar.html" class="app-bottom-nav-item">
+      <div class="nav-icon-wrap"><i class="fa fa-birthday-cake"></i></div>
+      <span class="nav-label">Diseñar</span>
+    </a>
+    <a href="product.html" class="app-bottom-nav-item">
+      <div class="nav-icon-wrap"><i class="fa fa-th-large"></i></div>
+      <span class="nav-label">Catálogo</span>
+    </a>
+    <button type="button" class="app-bottom-nav-item nav-item-bandeja" onclick="abrirModalCajita()" aria-label="Ver Bandeja Dulce">
+      <div class="nav-icon-wrap">
+        <i class="fa fa-shopping-basket"></i>
+        <span class="badge badge-pill badge-danger header-cart-badge d-none">0</span>
+      </div>
+      <span class="nav-label">Bandeja</span>
+    </button>
+    <button type="button" class="app-bottom-nav-item active" onclick="abrirAppDrawer()" aria-label="Abrir Menú Completo">
+      <div class="nav-icon-wrap"><i class="fa fa-bars"></i></div>
+      <span class="nav-label">Menú</span>
+    </button>
+  </nav>
+
+  <!-- App Slide-Out Drawer (Menú Móvil Exclusivo) -->
+  <div id="appDrawerOverlay" class="app-drawer-overlay">
+    <div class="app-slide-drawer">
+      <div class="app-drawer-header">
+        <div class="d-flex align-items-center">
+          <span class="fa-stack navbar-logo-stack mr-2" style="font-size: 0.9rem;">
+            <i class="fa fa-heart fa-stack-2x logo-heart"></i>
+          </span>
+          <span style="font-family: var(--font-title); font-size: 1.8rem; color: #2E4057; font-weight: 700;">Corazón de Coco</span>
+        </div>
+        <button type="button" class="cajita-close-btn" onclick="cerrarAppDrawer()" aria-label="Cerrar Menú">&times;</button>
+      </div>
+
+      <div class="app-drawer-body">
+        <p style="font-size: 0.92rem; color: #666; margin-bottom: 20px;">
+          Alta repostería internacional y diseños personalizados en Cosamaloapan, Veracruz.
+        </p>
+
+        <a href="index.html" class="app-drawer-link-card" onclick="cerrarAppDrawer()">
+          <div class="app-drawer-icon"><i class="fa fa-home"></i></div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Inicio / Rebanadas del Día</div>
+            <div style="font-size: 0.8rem; color: #777;">Porciones individuales para hoy</div>
+          </div>
+        </a>
+
+        <a href="disenar.html" class="app-drawer-link-card" onclick="cerrarAppDrawer()">
+          <div class="app-drawer-icon"><i class="fa fa-magic"></i></div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Diseñar Pastel</div>
+            <div style="font-size: 0.8rem; color: #777;">Cotizador interactivo paso a paso</div>
+          </div>
+        </a>
+
+        <a href="product.html" class="app-drawer-link-card" onclick="cerrarAppDrawer()">
+          <div class="app-drawer-icon"><i class="fa fa-th-large"></i></div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Catálogo Completo</div>
+            <div style="font-size: 0.8rem; color: #777;">Galería de pasteles y postres enteros</div>
+          </div>
+        </a>
+
+        <a href="about.html" class="app-drawer-link-card" onclick="cerrarAppDrawer()">
+          <div class="app-drawer-icon"><i class="fa fa-heart-o"></i></div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Nuestra Historia</div>
+            <div style="font-size: 0.8rem; color: #777;">Misión, visión y pasión por la pastelería</div>
+          </div>
+        </a>
+
+        <a href="contact.html" class="app-drawer-link-card" onclick="cerrarAppDrawer()">
+          <div class="app-drawer-icon"><i class="fa fa-map-marker"></i></div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Ubicación & Contacto</div>
+            <div style="font-size: 0.8rem; color: #777;">Cosamaloapan, Veracruz</div>
+          </div>
+        </a>
+
+        <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid #f0e6e0;">
+          <a href="https://wa.me/5212881409816?text=Hola!%20Me%20gustar%C3%ADa%20hacer%20un%20pedido" target="_blank" class="btn-primary-custom d-flex align-items-center justify-content-center" style="width: 100%; padding: 12px; margin-bottom: 10px; text-decoration: none;">
+            <i class="fa fa-whatsapp mr-2" style="font-size: 1.2rem;"></i> WhatsApp Directo
+          </a>
+          <a href="https://www.instagram.com/corazon_de_cooco" target="_blank" class="btn-outline-custom d-flex align-items-center justify-content-center" style="width: 100%; padding: 10px; text-decoration: none; font-size: 0.9rem;">
+            <i class="fa fa-instagram mr-2"></i> @corazon_de_cooco
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Control del Slide Drawer lateral
+    window.abrirAppDrawer = function() {
+      const drawer = document.getElementById("appDrawerOverlay");
+      if (drawer) drawer.classList.add("open");
+      document.body.style.overflow = "hidden";
+    };
+
+    window.cerrarAppDrawer = function() {
+      const drawer = document.getElementById("appDrawerOverlay");
+      if (drawer) drawer.classList.remove("open");
+      document.body.style.overflow = "";
+    };
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const drawer = document.getElementById("appDrawerOverlay");
+      if (drawer) {
+        drawer.addEventListener("click", function(e) {
+          if (e.target === drawer) cerrarAppDrawer();
+        });
+      }
+      
+      const yearSpan = document.getElementById("displayYear");
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    });
+  </script>
 </body>
 
 </html>

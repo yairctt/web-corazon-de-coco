@@ -1,6 +1,6 @@
 # Corazón de Coco - Sitio Web Comercial
 
-Sitio web profesional, multi-página e interactivo desarrollado para **Corazón de Coco**, una repostería artesanal local. Este proyecto fue diseñado y desplegado para un cliente real, cumpliendo con los estándares de rendimiento, diseño responsivo y optimización de conversión (enlaces directos a ventas).
+Sitio web profesional, multi-página e interactivo desarrollado para **Corazón de Coco**, atelier de alta repostería internacional y pasteles personalizados profesionales. Este proyecto fue diseñado y desplegado para un cliente real, cumpliendo con los estándares de rendimiento, diseño responsivo y optimización de conversión (enlaces directos a ventas).
 
 El objetivo principal fue digitalizar el catálogo del negocio, estructurar la información del menú y canalizar a los clientes potenciales hacia una vía rápida de cotización y contacto a través de WhatsApp.
 
@@ -22,7 +22,7 @@ El objetivo principal fue digitalizar el catálogo del negocio, estructurar la i
 El sitio web está organizado de manera estratégica para asegurar una navegación limpia y guiar al usuario hacia la acción:
 
 *   **Inicio (index.html):** Presentación de la marca, banners deslizantes promocionales, categorías principales de productos y el flujo de trabajo del negocio.
-*   **Acerca de nosotros (about.html):** Historia y filosofía de la repostería artesanal.
+*   **Acerca de nosotros (about.html):** Historia y filosofía de alta repostería internacional.
 *   **Productos (product.html):** Menú e información detallada de tamaños, sabores y rellenos disponibles con modales interactivos para consultas específicas.
 *   **Contacto (contact.html):** Formulario e integración de enlaces a redes sociales y mapa de ubicación física.
 
