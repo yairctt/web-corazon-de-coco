@@ -1938,33 +1938,70 @@ html, body {
     transform: scale(0.85);
   }
 
-  /* Vitrina de antojos: cuadrícula de 2 columnas estilo Rappi */
+  /* Hero de bienvenida en móvil (desahogado y estilizado) */
+  .app-store-hero {
+    padding: 18px 0 14px 0 !important;
+  }
+  .app-store-hero .container {
+    padding: 0 14px;
+  }
+  .store-greeting-kicker {
+    font-size: 0.8rem !important;
+    margin-bottom: 2px !important;
+  }
+  .store-greeting-title {
+    font-size: 2.3rem !important;
+    line-height: 1.15 !important;
+    margin-bottom: 4px !important;
+  }
+  .store-greeting-subtitle {
+    font-size: 0.86rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 12px !important;
+  }
+  .app-chips-scroll {
+    padding: 2px 0 6px 0 !important;
+    gap: 6px !important;
+  }
+  .app-chip {
+    padding: 6px 12px !important;
+    font-size: 0.78rem !important;
+  }
+
+  /* Vitrina de antojos: cuadrícula de 2 columnas con respiro */
   .seccion-antojos {
-    padding: 20px 0 50px 0 !important;
+    padding: 16px 0 55px 0 !important;
   }
   .seccion-antojos .container {
     padding: 0 10px;
   }
   .antojos-header {
-    margin-bottom: 20px !important;
+    margin-bottom: 14px !important;
   }
   .antojos-tag-pill {
     font-size: 0.72rem;
     padding: 4px 12px;
   }
   .antojos-title {
-    font-size: 2.3rem !important;
+    font-size: 2.1rem !important;
+    line-height: 1.15 !important;
+    margin-bottom: 2px !important;
   }
   .antojos-subtitle {
-    font-size: 0.86rem;
+    font-size: 0.82rem !important;
+    line-height: 1.35 !important;
+    color: #66758c !important;
     padding: 0 8px;
+    margin-bottom: 0 !important;
   }
 
   /* Tarjeta de Rebanada en cuadrícula móvil de 2 columnas */
   .rebanada-card {
-    padding: 12px 8px 14px 8px !important;
-    border-radius: 16px !important;
+    padding: 12px 9px 14px 9px !important;
+    border-radius: 18px !important;
     box-shadow: 0 2px 10px rgba(46, 64, 87, 0.05);
+    background: #FFFFFF !important;
+    border: 1px solid rgba(232, 196, 176, 0.45) !important;
   }
   .pastry-circle-frame.compact {
     width: 96px !important;
@@ -1973,8 +2010,8 @@ html, body {
     border-width: 3px !important;
   }
   .rebanada-badge {
-    top: 6px !important;
-    right: 6px !important;
+    top: 7px !important;
+    right: 7px !important;
     font-size: 0.62rem !important;
     padding: 2px 7px !important;
   }
@@ -1982,20 +2019,21 @@ html, body {
     font-size: 1.25rem !important;
     line-height: 1.15 !important;
     margin-bottom: 4px !important;
-    min-height: 2.4rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    min-height: 2.5rem;
+    display: block !important;
+    overflow: visible !important;
+    -webkit-line-clamp: unset !important;
   }
   .rebanada-desc {
-    font-size: 0.75rem !important;
-    line-height: 1.3 !important;
+    font-size: 0.76rem !important;
+    line-height: 1.35 !important;
     margin-bottom: 8px !important;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    display: block !important;
+    overflow: visible !important;
+    -webkit-line-clamp: unset !important;
+    -webkit-box-orient: unset !important;
+    color: #66758c !important;
+    min-height: auto;
   }
   .rebanada-footer {
     padding-top: 8px !important;
