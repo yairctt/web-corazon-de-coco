@@ -324,6 +324,10 @@ function crearElementosBandejaEnDOM() {
   overlay.addEventListener("click", (e) => {
     if (e.target === overlay) cerrarModalCajita();
   });
+  // Prevenir arrastre del fondo en pantallas táctiles al tocar el backdrop
+  overlay.addEventListener("touchmove", (e) => {
+    if (e.target === overlay) e.preventDefault();
+  }, { passive: false });
 }
 
 function actualizarUIBandeja() {
@@ -437,13 +441,23 @@ window.eliminarItemBandeja = function(id) {
 window.abrirModalCajita = function() {
   const overlay = document.getElementById("cajitaModalOverlay");
   if (overlay) overlay.classList.add("open");
-  document.body.style.overflow = "hidden";
+  if (typeof window.lockBodyScroll === "function") {
+    window.lockBodyScroll();
+  } else {
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+  }
 };
 
 window.cerrarModalCajita = function() {
   const overlay = document.getElementById("cajitaModalOverlay");
   if (overlay) overlay.classList.remove("open");
-  document.body.style.overflow = "";
+  if (typeof window.unlockBodyScroll === "function") {
+    window.unlockBodyScroll();
+  } else {
+    document.documentElement.style.overflow = "";
+    document.body.style.overflow = "";
+  }
 };
 
 let toastTimeout = null;
@@ -551,6 +565,10 @@ function crearModalAdminEnDOM() {
   overlay.addEventListener("click", (e) => {
     if (e.target === overlay) cerrarModalAdmin();
   });
+  // Prevenir arrastre del fondo en pantallas táctiles al tocar el backdrop
+  overlay.addEventListener("touchmove", (e) => {
+    if (e.target === overlay) e.preventDefault();
+  }, { passive: false });
 }
 
 // Trigger secreto: contador de clics rápidos en copyright del footer
@@ -585,13 +603,23 @@ window.abrirModalAdmin = function() {
   if (!overlay) return;
   renderizarAdminItemsList();
   overlay.classList.add("open");
-  document.body.style.overflow = "hidden";
+  if (typeof window.lockBodyScroll === "function") {
+    window.lockBodyScroll();
+  } else {
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+  }
 };
 
 window.cerrarModalAdmin = function() {
   const overlay = document.getElementById("adminModalOverlay");
   if (overlay) overlay.classList.remove("open");
-  document.body.style.overflow = "";
+  if (typeof window.unlockBodyScroll === "function") {
+    window.unlockBodyScroll();
+  } else {
+    document.documentElement.style.overflow = "";
+    document.body.style.overflow = "";
+  }
 };
 
 function renderizarAdminItemsList() {
