@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-621TZX65NL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-621TZX65NL');
+  </script>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+
+  <title>Diseñar Pastel Personalizado - Corazón de Coco</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <!-- Luxury Patisserie Design System -->
+  <link href="css/reposteria-luxury.css" rel="stylesheet" />
+
+  <!-- Vercel Web Analytics -->
+  <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+</head>
+
+<body>
+
+  <!-- Top Announcement Bar (Status App) -->
+  <div class="top-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="top-contact d-flex align-items-center">
+        <span class="mr-3" style="font-size: 0.85rem; color: #e2ebf4;">
+          <i class="fa fa-map-marker text-white mr-1"></i> Cosamaloapan, Veracruz
+        </span>
+        <a href="tel:+522881409816" class="d-none d-md-inline"><i class="fa fa-phone mr-1"></i> +52 288 140 9816</a>
+      </div>
+      <div class="top-social d-flex align-items-center">
+        <span style="font-size: 0.85rem; color: var(--c-brand-primary);">Pedidos con 3 días de anticipación</span>
+        <button type="button" class="top-bar-close-btn" onclick="cerrarTopBar()" title="Cerrar notificación" aria-label="Cerrar notificación">&times;</button>
+      </div>
+    </div>
+  </div>
+  <!-- end top bar section -->
+
+  <!-- Header SaaS / E-Commerce App (No estático - Scroll natural) -->
+  <header class="header_section premium-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg custom_nav-container p-0">
+        <!-- Logo Oficial de la Marca -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <span class="fa-stack navbar-logo-stack mr-2">
+            <i class="fa fa-heart fa-stack-2x logo-heart"></i>
+          </span>
+          <span>Corazón de Coco</span>
+        </a>
+
+        <!-- Acciones Rápidas del Navbar (Bandeja y Menú) -->
+        <div class="d-flex align-items-center ml-auto">
+          <!-- Botón Bandeja de Compras -->
+          <button type="button" class="btn btn-sm mr-2" onclick="abrirModalCajita()" style="background: #e8c4b0; color: #2E4057; font-weight: 700; border-radius: 999px; padding: 7px 14px; position: relative;" title="Ver Bandeja Dulce">
+            <i class="fa fa-shopping-basket"></i> <span class="d-none d-sm-inline ml-1">Bandeja</span>
+            <span class="badge badge-pill badge-danger header-cart-badge d-none" style="position: absolute; top: -6px; right: -6px; background: #e06d53; font-size: 0.72rem;">0</span>
+          </button>
+
+          <!-- Botón Menú Lateral (Drawer) -->
+          <button type="button" class="btn btn-sm" onclick="abrirAppDrawer()" style="background: #fcf9f5; border: 1.5px solid #2E4057; color: #2E4057; border-radius: 999px; padding: 7px 12px;" aria-label="Abrir Menú">
+            <i class="fa fa-bars" style="font-size: 1.1rem;"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+
+  <!-- Header Minimalista Estilo UberEats (Mobile First) -->
+  <section class="app-store-hero">
+    <div class="container">
+      <div class="d-flex flex-column align-items-start">
+        <span class="store-greeting-kicker">Tu evento, a tu estilo</span>
+        <h1 class="store-greeting-title">Diseña tu pastel a medida</h1>
+        <p class="store-greeting-subtitle">
+          Elige porciones, bizcocho, relleno y temática. Te enviaremos tu cotización lo antes posible.
+        </p>
+
+        <!-- Pastillas / Chips de Acceso Rápido -->
+        <div class="app-chips-scroll w-100">
+          <a href="#pastel-builder" class="app-chip active">
+            <i class="fa fa-birthday-cake"></i> Configurar Paso a Paso
+          </a>
+          <a href="index.html#antojos" class="app-chip">
+            <i class="fa fa-cutlery"></i> Rebanadas del Día
+          </a>
+          <a href="product.html" class="app-chip">
+            <i class="fa fa-th-large"></i> Ver Fotos de Pasteles
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN PRINCIPAL: CONSTRUCTOR DE PASTEL INTERACTIVO (SIN PRECIOS FIJOS)
+       ========================================================================== -->
+  <section id="pastel-builder" class="seccion-builder" style="background: #ffffff; padding: 25px 0 60px 0;">
+    <div class="container">
+      <div id="builderDisenoSeleccionadoAviso" style="display: none; margin-bottom: 25px;"></div>
+      
+      <div class="row">
+        <!-- Columna Izquierda: Opciones paso a paso -->
+        <div class="col-lg-8">
+          <div class="builder-card-container">
+            
+            <!-- Paso 1: Tamaño y Porciones con ICONOS VECTORIALES -->
+            <div class="mb-5">
+              <div class="builder-step-header">
+                <span class="builder-step-num">1</span>
+                <h3 class="builder-step-title">Selecciona el Tamaño & Porciones</h3>
+              </div>
+              <div class="builder-tamano-grid">
+                
+                <!-- Mini / Pareja -->
+                <div class="builder-tamano-card" data-tamano="mini">
+                  <div class="builder-tamano-icon-box">
+                    <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
+                      <rect x="10" y="18" width="16" height="12" rx="2" fill="#e8c4b0"/>
+                      <path d="M10 18 Q14 22 18 18 Q22 22 26 18" stroke="#2E4057" stroke-width="1.5"/>
+                      <path d="M18 11 C17 9 15 10 15 12 C15 14 18 16 18 16 C18 16 21 14 21 12 C21 10 19 9 18 11 Z" fill="#e06d53"/>
+                      <line x1="6" y1="30" x2="30" y2="30" stroke="#2E4057" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <div class="builder-tamano-nombre">Mini / Pareja</div>
+                  <div class="builder-tamano-porciones">1 a 2 personas</div>
+                  <span class="builder-tamano-badge-sub">Bento Cake</span>
+                </div>
+
+                <!-- Chico -->
+                <div class="builder-tamano-card" data-tamano="chico">
+                  <div class="builder-tamano-icon-box">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                      <rect x="8" y="16" width="20" height="14" rx="2" fill="#fde7eb" stroke="#2E4057" stroke-width="1.5"/>
+                      <path d="M8 20 C11 22 15 22 18 20 C21 22 25 22 28 20" stroke="#e8c4b0" stroke-width="2.5"/>
+                      <line x1="18" y1="11" x2="18" y2="16" stroke="#2E4057" stroke-width="1.5"/>
+                      <circle cx="18" cy="9" r="2" fill="#C28851"/>
+                      <line x1="5" y1="30" x2="31" y2="30" stroke="#2E4057" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <div class="builder-tamano-nombre">Chico</div>
+                  <div class="builder-tamano-porciones">8 a 10 personas</div>
+                  <span class="builder-tamano-badge-sub">Reunión pequeña</span>
+                </div>
+
+                <!-- Mediano (Preseleccionado por defecto) -->
+                <div class="builder-tamano-card active" data-tamano="mediano">
+                  <div class="builder-tamano-icon-box">
+                    <svg width="38" height="38" viewBox="0 0 36 36" fill="none">
+                      <rect x="6" y="16" width="24" height="14" rx="2" fill="#e8c4b0" stroke="#2E4057" stroke-width="1.5"/>
+                      <path d="M6 19 Q12 23 18 19 Q24 23 30 19" fill="#fde7eb"/>
+                      <line x1="14" y1="10" x2="14" y2="16" stroke="#2E4057" stroke-width="1.5"/>
+                      <circle cx="14" cy="8" r="1.8" fill="#e06d53"/>
+                      <line x1="22" y1="10" x2="22" y2="16" stroke="#2E4057" stroke-width="1.5"/>
+                      <circle cx="22" cy="8" r="1.8" fill="#e06d53"/>
+                      <line x1="4" y1="30" x2="32" y2="30" stroke="#2E4057" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <div class="builder-tamano-nombre">Mediano</div>
+                  <div class="builder-tamano-porciones">15 personas</div>
+                  <span class="builder-tamano-badge-sub">El más pedido</span>
+                </div>
+
+                <!-- Grande -->
+                <div class="builder-tamano-card" data-tamano="grande">
+                  <div class="builder-tamano-icon-box">
+                    <svg width="40" height="40" viewBox="0 0 36 36" fill="none">
+                      <rect x="5" y="14" width="26" height="16" rx="2" fill="#fde7eb" stroke="#2E4057" stroke-width="1.5"/>
+                      <path d="M5 18 Q11 22 18 18 Q25 22 31 18" stroke="#e8c4b0" stroke-width="2.5"/>
+                      <line x1="12" y1="8" x2="12" y2="14" stroke="#2E4057" stroke-width="1.5"/>
+                      <circle cx="12" cy="6" r="1.8" fill="#C28851"/>
+                      <line x1="18" y1="7" x2="18" y2="14" stroke="#2E4057" stroke-width="1.5"/>
+                      <circle cx="18" cy="5" r="2" fill="#e06d53"/>
+                      <line x1="24" y1="8" x2="24" y2="14" stroke="#2E4057" stroke-width="1.5"/>
+                      <circle cx="24" cy="6" r="1.8" fill="#C28851"/>
+                      <line x1="3" y1="30" x2="33" y2="30" stroke="#2E4057" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <div class="builder-tamano-nombre">Grande</div>
+                  <div class="builder-tamano-porciones">20 personas</div>
+                  <span class="builder-tamano-badge-sub">Cumpleaños</span>
+                </div>
+
+                <!-- Extra Grande -->
+                <div class="builder-tamano-card" data-tamano="extra">
+                  <div class="builder-tamano-icon-box">
+                    <svg width="40" height="40" viewBox="0 0 36 36" fill="none">
+                      <rect x="10" y="11" width="16" height="8" rx="1.5" fill="#e8c4b0" stroke="#2E4057" stroke-width="1.5"/>
+                      <rect x="5" y="19" width="26" height="11" rx="2" fill="#fde7eb" stroke="#2E4057" stroke-width="1.5"/>
+                      <line x1="18" y1="6" x2="18" y2="11" stroke="#2E4057" stroke-width="1.5"/>
+                      <circle cx="18" cy="4" r="2" fill="#e06d53"/>
+                      <line x1="3" y1="30" x2="33" y2="30" stroke="#2E4057" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <div class="builder-tamano-nombre">Extra Grande</div>
+                  <div class="builder-tamano-porciones">30 personas</div>
+                  <span class="builder-tamano-badge-sub">2 Pisos</span>
+                </div>
+
+                <!-- Fiesta / Pisos -->
+                <div class="builder-tamano-card" data-tamano="fiesta">
+                  <div class="builder-tamano-icon-box">
+                    <svg width="42" height="42" viewBox="0 0 36 36" fill="none">
+                      <rect x="13" y="8" width="10" height="6" rx="1" fill="#fde7eb" stroke="#2E4057" stroke-width="1.2"/>
+                      <rect x="9" y="14" width="18" height="7" rx="1.2" fill="#e8c4b0" stroke="#2E4057" stroke-width="1.3"/>
+                      <rect x="5" y="21" width="26" height="9" rx="1.5" fill="#fde7eb" stroke="#2E4057" stroke-width="1.5"/>
+                      <circle cx="18" cy="4" r="2.2" fill="#e06d53"/>
+                      <line x1="2" y1="30" x2="34" y2="30" stroke="#2E4057" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <div class="builder-tamano-nombre">Fiesta / Pisos</div>
+                  <div class="builder-tamano-porciones">40+ personas</div>
+                  <span class="builder-tamano-badge-sub">Bodas & XV</span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Paso 2: Sabor de Pan -->
+            <div class="mb-5">
+              <div class="builder-step-header">
+                <span class="builder-step-num">2</span>
+                <h3 class="builder-step-title">Elige el Sabor del Bizcocho</h3>
+              </div>
+              <div class="builder-pills-grid">
+                <span class="builder-pan-pill active" data-pan="Vainilla humedecida en 3 leches">
+                  Vainilla 3 Leches
+                </span>
+                <span class="builder-pan-pill" data-pan="Red Velvet clásico">
+                  Red Velvet
+                </span>
+                <span class="builder-pan-pill" data-pan="Chocolate húmedo fudge">
+                  Chocolate Fudge
+                </span>
+                <span class="builder-pan-pill" data-pan="Zanahoria gourmet con especias">
+                  Zanahoria Gourmet
+                </span>
+              </div>
+            </div>
+
+            <!-- Paso 3: Relleno Especial -->
+            <div class="mb-5">
+              <div class="builder-step-header">
+                <span class="builder-step-num">3</span>
+                <h3 class="builder-step-title">Selecciona el Relleno Especial</h3>
+              </div>
+              <div class="builder-pills-grid">
+                <span class="builder-relleno-pill active" data-relleno="Crema de avellanas / Chocolate">
+                  Crema de Avellana
+                </span>
+                <span class="builder-relleno-pill" data-relleno="Queso crema con zarzamora">
+                  Queso Crema con Zarzamora
+                </span>
+                <span class="builder-relleno-pill" data-relleno="Cookies & Cream (Oreo)">
+                  Cookies & Cream
+                </span>
+                <span class="builder-relleno-pill" data-relleno="Fresas frescas con crema">
+                  Fresas con Crema
+                </span>
+                <span class="builder-relleno-pill" data-relleno="Cajeta quemada tradicional">
+                  Cajeta Tradicional
+                </span>
+                <span class="builder-relleno-pill" data-relleno="Coco con piña colada">
+                  Coco con Piña
+                </span>
+                <span class="builder-relleno-pill" data-relleno="Café moka suave">
+                  Café Moka
+                </span>
+                <span class="builder-relleno-pill" data-relleno="Nuez seleccionada">
+                  Nuez Selecta
+                </span>
+              </div>
+            </div>
+
+            <!-- Paso 4: Ocasión y Dedicatoria -->
+            <div class="mb-5">
+              <div class="builder-step-header">
+                <span class="builder-step-num">4</span>
+                <h3 class="builder-step-title">Temática y Dedicatoria en Placa</h3>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label style="font-size: 0.88rem; font-weight: 700; color: #2E4057;">Ocasión:</label>
+                  <select id="builderTematica" class="form-control" style="border-radius: 12px; height: 46px;">
+                    <option value="Cumpleaños">Cumpleaños</option>
+                    <option value="Aniversario">Aniversario / Pareja</option>
+                    <option value="Infantil / Temático">Infantil / Temático</option>
+                    <option value="Vintage / Elegante">Vintage Floral</option>
+                    <option value="Boda / Graduación">Boda o Graduación</option>
+                    <option value="Celebración Casual">Celebración Casual</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label style="font-size: 0.88rem; font-weight: 700; color: #2E4057;">Dedicatoria en el pastel (Opcional):</label>
+                  <input type="text" id="builderDedicatoria" class="form-control" placeholder="Ej. ¡Feliz Cumpleaños Mariana!" style="border-radius: 12px; height: 46px;">
+                </div>
+              </div>
+            </div>
+
+            <!-- Paso 5: Fecha de Entrega (Regla de 3 días) -->
+            <div>
+              <div class="builder-step-header">
+                <span class="builder-step-num">5</span>
+                <h3 class="builder-step-title">Fecha de tu Evento (Mínimo 3 días de anticipación)</h3>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-md-6 mb-2">
+                  <input type="date" id="builderFecha" class="form-control" style="border-radius: 12px; height: 46px; font-weight: 700;">
+                </div>
+                <div class="col-md-6">
+                  <small style="color: #666; font-size: 0.85rem; line-height: 1.3; display: block;">
+                    <i class="fa fa-info-circle text-primary"></i> Horneamos bajo pedido para garantizar la máxima frescura y calidad profesional.
+                  </small>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Tarjeta de Resumen en Vivo SIN PRECIOS -->
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="builder-summary-card">
+            <h4 class="builder-summary-title">Resumen de tu Creación</h4>
+            
+            <div style="text-align: center; padding: 15px 0 20px 0; border-bottom: 1px solid #f0dbcf; margin-bottom: 15px;">
+              <div style="width: 75px; height: 75px; border-radius: 50%; background: #fde7eb; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto; border: 2px solid #e8c4b0; color: #2E4057; font-size: 2rem;">
+                <i class="fa fa-birthday-cake"></i>
+              </div>
+              <div style="font-family: var(--font-title); font-size: 1.6rem; color: #2E4057; font-weight: 700;">Pastel Personalizado</div>
+              <small style="color: #666;">Diseño a tu medida</small>
+            </div>
+
+            <div class="builder-summary-row">
+              <span class="builder-summary-label">Tamaño:</span>
+              <span id="resumenTamano" class="builder-summary-val">Mediano (15 personas)</span>
+            </div>
+
+            <div class="builder-summary-row">
+              <span class="builder-summary-label">Bizcocho:</span>
+              <span id="resumenPan" class="builder-summary-val">Vainilla 3 Leches</span>
+            </div>
+
+            <div class="builder-summary-row">
+              <span class="builder-summary-label">Relleno:</span>
+              <span id="resumenRelleno" class="builder-summary-val">Crema de Avellana</span>
+            </div>
+
+            <div class="builder-summary-row">
+              <span class="builder-summary-label">Fecha:</span>
+              <span id="resumenFecha" class="builder-summary-val">Por definir</span>
+            </div>
+
+            <!-- Aviso claro: Cotización personalizada por WhatsApp sin precios fijos -->
+            <div style="background: #fde7eb; border-radius: 14px; padding: 14px 16px; margin: 20px 0; border: 1px solid #e8c4b0;">
+              <div style="font-weight: 700; color: #2E4057; font-size: 0.92rem; margin-bottom: 4px; display: flex; align-items: center;">
+                <i class="fa fa-paper-plane mr-2" style="color: #2E4057;"></i> Presupuesto a la medida
+              </div>
+              <p style="font-size: 0.84rem; color: #555; margin: 0; line-height: 1.4;">
+                Se enviará tu configuración por WhatsApp y te responderemos lo más pronto posible con el presupuesto exacto según la decoración de tu diseño.
+              </p>
+            </div>
+
+            <a id="btnCotizarPastelWa" href="#" target="_blank" class="btn-pedir-cajita-wa" style="text-decoration: none;">
+              <i class="fa fa-whatsapp" style="font-size: 1.3rem;"></i> Enviar Solicitud por WhatsApp
+            </a>
+
+            <p class="text-center mt-3 mb-0" style="font-size: 0.8rem; color: #777;">
+              <i class="fa fa-clock-o mr-1"></i> Respuesta rápida y atención personalizada.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN DE INSPIRACIÓN: DISEÑOS POPULARES
+       ========================================================================== -->
+  <section class="product_section featured-section layout_padding" style="background: var(--c-brand-cream);">
+    <div class="container">
+      <div class="heading_container heading_center mb-5 text-center">
+        <h2 class="featured-title">Inspiración de Diseños</h2>
+        <p style="color: #555; font-size: 1.05rem; margin-top: 10px;">
+          ¿Te gusta algún estilo? Haz clic en <strong>"Cargar este estilo"</strong> para integrarlo a tu solicitud.
+        </p>
+      </div>
+
+      <div class="row">
+        <!-- Diseño 1 -->
+        <div class="col-sm-6 col-md-3 mb-4">
+          <div class="boutique-item text-center">
+            <div class="boutique-img-ring">
+              <img src="images/pastel_stich.png" alt="Pastel Stitch" loading="lazy">
+            </div>
+            <h6 class="boutique-item-title">Pastel Stitch Infantil</h6>
+            <button class="boutique-btn" onclick="precargarDisenoEnBuilder('Pastel Temático Stitch', 'images/pastel_stich.png')">
+              <i class="fa fa-magic"></i> Cargar este estilo
+            </button>
+          </div>
+        </div>
+
+        <!-- Diseño 2 -->
+        <div class="col-sm-6 col-md-3 mb-4">
+          <div class="boutique-item text-center">
+            <div class="boutique-img-ring">
+              <img src="images/pastel_c_rosas.png" alt="Pastel con Rosas" loading="lazy">
+            </div>
+            <h6 class="boutique-item-title">Pastel Floral con Rosas</h6>
+            <button class="boutique-btn" onclick="precargarDisenoEnBuilder('Pastel Floral con Rosas Naturales', 'images/pastel_c_rosas.png')">
+              <i class="fa fa-magic"></i> Cargar este estilo
+            </button>
+          </div>
+        </div>
+
+        <!-- Diseño 3 -->
+        <div class="col-sm-6 col-md-3 mb-4">
+          <div class="boutique-item text-center">
+            <div class="boutique-img-ring">
+              <img src="images/pastel_dragon_ball.png" alt="Pastel Dragon Ball" loading="lazy">
+            </div>
+            <h6 class="boutique-item-title">Pastel Dragon Ball</h6>
+            <button class="boutique-btn" onclick="precargarDisenoEnBuilder('Pastel Dragon Ball 3 Leches', 'images/pastel_dragon_ball.png')">
+              <i class="fa fa-magic"></i> Cargar este estilo
+            </button>
+          </div>
+        </div>
+
+        <!-- Diseño 4 -->
+        <div class="col-sm-6 col-md-3 mb-4">
+          <div class="boutique-item text-center">
+            <div class="boutique-img-ring">
+              <img src="images/pastel_vin_bco.png" alt="Pastel Vintage Blanco" loading="lazy">
+            </div>
+            <h6 class="boutique-item-title">Pastel Vintage Blanco</h6>
+            <button class="boutique-btn" onclick="precargarDisenoEnBuilder('Pastel Vintage Blanco Elegante', 'images/pastel_vin_bco.png')">
+              <i class="fa fa-magic"></i> Cargar este estilo
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-3">
+        <a href="product.html" class="btn-primary-custom" style="padding: 12px 30px; font-size: 1rem;">
+          <i class="fa fa-th"></i> Explorar Catálogo con +100 Diseños
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Oficial Unificado -->
+  <footer class="premium-footer">
+    <div class="container">
+      <div class="row pt-5 pb-2">
+        <div class="col-lg-5 col-md-5 col-12 mb-4 mb-md-0 text-center text-md-left">
+          <a href="index.html" class="footer-brand d-inline-flex align-items-center mb-2">
+            <span class="fa-stack navbar-logo-stack mr-2" style="font-size: 1.1rem;">
+              <i class="fa fa-heart fa-stack-2x logo-heart"></i>
+            </span>
+            <span class="footer-brand-title" style="font-family: var(--font-title); font-size: 2.2rem; color: #FFFFFF !important; font-weight: 700;">Corazón de Coco</span>
+          </a>
+          <p class="footer-tagline">
+            Alta repostería internacional y diseños personalizados hechos con el corazón en Cosamaloapan, Veracruz.
+          </p>
+          <div class="footer-social-icons mt-3">
+            <a href="https://www.facebook.com/profile.php?id=61573250580017" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+            <a href="https://wa.me/5212881409816" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/corazon_de_cooco" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-6 mb-4 mb-md-0 text-left">
+          <h5 class="footer-heading">Navegación</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Rebanadas del Día</a></li>
+            <li><a href="disenar.html">Diseñar Pastel</a></li>
+            <li><a href="product.html">Catálogo Completo</a></li>
+            <li><a href="about.html">Nuestra Historia</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4 col-6 mb-4 mb-md-0 text-left">
+          <h5 class="footer-heading">Contacto</h5>
+          <ul class="footer-contact-info">
+            <li>
+              <i class="fa fa-map-marker"></i>
+              <span>Cosamaloapan, Ver.</span>
+            </li>
+            <li>
+              <i class="fa fa-phone"></i>
+              <a href="tel:+522881409816">+52 288 140 9816</a>
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i>
+              <a href="mailto:aurachavezfri@gmail.com" class="footer-email-link">aurachavezfri@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p class="mb-0" onclick="checkSecretAdminTap()" style="cursor: default; user-select: none;">&copy; <span id="displayYear"></span> Corazón de Coco. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/5212881409816?text=Hola!%20Me%20gustaría%20más%20información" target="_blank" class="whatsapp-float">
+    <i class="fa fa-whatsapp"></i>
+    <span class="whatsapp-float-msg">¡Contáctanos!</span>
+  </a>
+
+  <!-- jQuery & Bootstrap -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/custom.js"></script>
+
+  <!-- CocoBot Widget -->
+  <link href="css/cocobot.css" rel="stylesheet" />
+  <script src="js/cocobot.js"></script>
+
+  <!-- Motor de Rebanadas, Carrito Express y Panel Dueña -->
+  <script src="js/antojos.js"></script>
+
+  <!-- Motor de Pastel Builder Interactivo -->
+  <script src="js/builder.js"></script>
+
+  <!-- Barra de Opciones Inferior Estilo Rappi (Bottom App Bar) -->
+  <nav class="app-bottom-nav" aria-label="Navegación principal">
+    <a href="index.html" class="app-bottom-nav-item">
+      <div class="nav-icon-wrap"><i class="fa fa-home"></i></div>
+      <span class="nav-label">Inicio</span>
+    </a>
+    <a href="disenar.html" class="app-bottom-nav-item active">
+      <div class="nav-icon-wrap"><i class="fa fa-birthday-cake"></i></div>
+      <span class="nav-label">Diseñar</span>
+    </a>
+    <a href="product.html" class="app-bottom-nav-item">
+      <div class="nav-icon-wrap"><i class="fa fa-th-large"></i></div>
+      <span class="nav-label">Catálogo</span>
+    </a>
+    <button type="button" class="app-bottom-nav-item nav-item-bandeja" onclick="abrirModalCajita()" aria-label="Ver Bandeja Dulce">
+      <div class="nav-icon-wrap">
+        <i class="fa fa-shopping-basket"></i>
+        <span class="badge badge-pill badge-danger header-cart-badge d-none">0</span>
+      </div>
+      <span class="nav-label">Bandeja</span>
+    </button>
+    <button type="button" class="app-bottom-nav-item" onclick="abrirAppDrawer()" aria-label="Abrir Menú Completo">
+      <div class="nav-icon-wrap"><i class="fa fa-bars"></i></div>
+      <span class="nav-label">Menú</span>
+    </button>
+  </nav>
+
+  <!-- App Slide-Out Drawer (Menú Móvil Exclusivo) -->
+  <div id="appDrawerOverlay" class="app-drawer-overlay">
+    <div class="app-slide-drawer">
+      <div class="app-drawer-header">
+        <div class="d-flex align-items-center">
+          <span class="fa-stack navbar-logo-stack mr-2" style="font-size: 0.9rem;">
+            <i class="fa fa-heart fa-stack-2x logo-heart"></i>
+          </span>
+          <span style="font-family: var(--font-title); font-size: 1.8rem; color: #2E4057; font-weight: 700;">Corazón de Coco</span>
+        </div>
+        <button type="button" class="cajita-close-btn" onclick="cerrarAppDrawer()" aria-label="Cerrar Menú">&times;</button>
+      </div>
+
+      <div class="app-drawer-body">
+        <p style="font-size: 0.92rem; color: #666; margin-bottom: 20px;">
+          Alta repostería internacional y diseños personalizados en Cosamaloapan, Veracruz.
+        </p>
+
+        <a href="index.html" class="app-drawer-link-card" onclick="cerrarAppDrawer()">
+          <div class="app-drawer-icon"><i class="fa fa-home"></i></div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Inicio / Rebanadas del Día</div>
+            <div style="font-size: 0.8rem; color: #777;">Porciones individuales para hoy</div>
+          </div>
+        </a>
+
+        <a href="disenar.html" class="app-drawer-link-card" onclick="cerrarAppDrawer()">
+          <div class="app-drawer-icon"><i class="fa fa-magic"></i></div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Diseñar Pastel</div>
+            <div style="font-size: 0.8rem; color: #777;">Cotizador interactivo paso a paso</div>
+          </div>
+        </a>
+
+        <a href="product.html" class="app-drawer-link-card" onclick="cerrarAppDrawer()">
+          <div class="app-drawer-icon"><i class="fa fa-th-large"></i></div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Catálogo Completo</div>
+            <div style="font-size: 0.8rem; color: #777;">Galería de pasteles y postres enteros</div>
+          </div>
+        </a>
+
+        <a href="about.html" class="app-drawer-link-card" onclick="cerrarAppDrawer()">
+          <div class="app-drawer-icon"><i class="fa fa-heart-o"></i></div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Nuestra Historia</div>
+            <div style="font-size: 0.8rem; color: #777;">Misión, visión y pasión por la pastelería</div>
+          </div>
+        </a>
+
+        <a href="contact.html" class="app-drawer-link-card" onclick="cerrarAppDrawer()">
+          <div class="app-drawer-icon"><i class="fa fa-map-marker"></i></div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Ubicación & Contacto</div>
+            <div style="font-size: 0.8rem; color: #777;">Cosamaloapan, Veracruz</div>
+          </div>
+        </a>
+
+        <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid #f0e6e0;">
+          <a href="https://wa.me/5212881409816?text=Hola!%20Me%20gustar%C3%ADa%20hacer%20un%20pedido" target="_blank" class="btn-primary-custom d-flex align-items-center justify-content-center" style="width: 100%; padding: 12px; margin-bottom: 10px; text-decoration: none;">
+            <i class="fa fa-whatsapp mr-2" style="font-size: 1.2rem;"></i> WhatsApp Directo
+          </a>
+          <a href="https://www.instagram.com/corazon_de_cooco" target="_blank" class="btn-outline-custom d-flex align-items-center justify-content-center" style="width: 100%; padding: 10px; text-decoration: none; font-size: 0.9rem;">
+            <i class="fa fa-instagram mr-2"></i> @corazon_de_cooco
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Control del Slide Drawer lateral
+    window.abrirAppDrawer = function() {
+      const drawer = document.getElementById("appDrawerOverlay");
+      if (drawer) drawer.classList.add("open");
+      document.body.style.overflow = "hidden";
+    };
+
+    window.cerrarAppDrawer = function() {
+      const drawer = document.getElementById("appDrawerOverlay");
+      if (drawer) drawer.classList.remove("open");
+      document.body.style.overflow = "";
+    };
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const drawer = document.getElementById("appDrawerOverlay");
+      if (drawer) {
+        drawer.addEventListener("click", function(e) {
+          if (e.target === drawer) cerrarAppDrawer();
+        });
+      }
+      
+      const yearSpan = document.getElementById("displayYear");
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    });
+  </script>
+
+</body>
+
+</html>

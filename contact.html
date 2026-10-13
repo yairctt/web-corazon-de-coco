@@ -22,7 +22,7 @@
   <meta name="author" content="" />
   <link rel="shortcut icon" href="images/favicon.png" type="">
 
-  <title> Corazón de Coco </title>
+  <title> Contáctanos </title>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -39,199 +39,248 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+  <!-- Luxury Patisserie Design System (Fases 1 & 2) -->
+  <link href="css/reposteria-luxury.css" rel="stylesheet" />
+
   <!-- Vercel Web Analytics -->
   <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
-
 </head>
 
-<body class="sub_page">
+<body>
 
-  <div class="hero_area">
+  <!-- Top Announcement Bar (Status App) -->
+  <div class="top-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="top-contact d-flex align-items-center">
+        <span class="mr-3" style="font-size: 0.85rem; color: #e2ebf4;">
+          <i class="fa fa-map-marker text-white mr-1"></i> Cosamaloapan, Veracruz
+        </span>
+        <a href="tel:+522881409816" class="d-none d-md-inline"><i class="fa fa-phone mr-1"></i> +52 288 140 9816</a>
+      </div>
+      <div class="top-social d-flex align-items-center">
+        <span style="font-size: 0.85rem; color: var(--c-brand-primary);">Pedidos con 3 días de anticipación</span>
+        <button type="button" class="top-bar-close-btn" onclick="cerrarTopBar()" title="Cerrar notificación" aria-label="Cerrar notificación">&times;</button>
+      </div>
+    </div>
+  </div>
+  <!-- end top bar section -->
 
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index">
-            <span>
-              Corazón de Coco
-            </span>
-          </a>
+  <!-- Header SaaS / E-Commerce App -->
+  <header class="header_section premium-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg custom_nav-container p-0">
+        <!-- Logo Oficial de la Marca -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <span class="fa-stack navbar-logo-stack mr-2">
+            <i class="fa fa-heart fa-stack-2x logo-heart"></i>
+          </span>
+          <span>Corazón de Coco</span>
+        </a>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class=""> </span>
+        <!-- Acciones Rápidas del Navbar (Bandeja y Menú) -->
+        <div class="d-flex align-items-center ml-auto">
+          <!-- Botón Bandeja de Compras -->
+          <button type="button" class="btn btn-sm mr-2" onclick="abrirModalCajita()" style="background: #e8c4b0; color: #2E4057; font-weight: 700; border-radius: 999px; padding: 7px 14px; position: relative;" title="Ver Bandeja Dulce">
+            <i class="fa fa-shopping-basket"></i> <span class="d-none d-sm-inline ml-1">Bandeja</span>
+            <span class="badge badge-pill badge-danger header-cart-badge d-none" style="position: absolute; top: -6px; right: -6px; background: #e06d53; font-size: 0.72rem;">0</span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav  ">
-              <li class="nav-item ">
-                <a class="nav-link" href="index">Inicio </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about"> Acerca de</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="product">Productos</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="contact">Contáctanos <span class="sr-only">(current)</span> </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+          <!-- Botón Menú Lateral (Drawer) -->
+          <button type="button" class="btn btn-sm" onclick="abrirAppDrawer()" style="background: #fcf9f5; border: 1.5px solid #2E4057; color: #2E4057; border-radius: 999px; padding: 7px 12px;" aria-label="Abrir Menú">
+            <i class="fa fa-bars" style="font-size: 1.1rem;"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+
+  <!-- Header Minimalista Estilo UberEats (Mobile First) -->
+  <section class="app-store-hero">
+    <div class="container">
+      <div class="d-flex flex-column align-items-start">
+        <span class="store-greeting-kicker">Estamos para ayudarte</span>
+        <h1 class="store-greeting-title">Contáctanos</h1>
+        <p class="store-greeting-subtitle">
+          Estamos aquí para resolver tus dudas y ayudarte a agendar tu pedido de pastel especial.
+        </p>
+
+        <!-- Pastillas / Chips de Acceso Rápido -->
+        <div class="app-chips-scroll w-100">
+          <a href="https://wa.me/522881409816" target="_blank" class="app-chip active">
+            <i class="fa fa-whatsapp"></i> Chat WhatsApp Directo
+          </a>
+          <a href="disenar.html" class="app-chip">
+            <i class="fa fa-magic"></i> Diseñar Pastel
+          </a>
+          <a href="index.html#antojos" class="app-chip">
+            <i class="fa fa-cutlery"></i> Rebanadas del Día
+          </a>
+        </div>
       </div>
-    </header>
-    <!-- end header section -->
-  </div>
+    </div>
+  </section>
 
   <!-- contact section -->
-  <section class="contact_section layout_padding">
+  <section class="boutique-contact-section">
     <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Contáctanos
-        </h2>
-        <p>
-          Estamos listos para hacer realidad tu pastel soñado. Escríbenos por tu medio favorito.
-        </p>
-      </div>
+      <div class="row align-items-center">
+        <!-- Left Side: Information -->
+        <div class="col-lg-6 mb-5 mb-lg-0 pr-lg-5">
+          <h2 class="boutique-contact-title mb-4">Hablemos de tu evento</h2>
+          <p class="boutique-contact-text mb-5">
+            Cada creación es única, diseñada especialmente para ti con los ingredientes más finos. 
+            Escríbenos para agendar un pedido o cotizar un diseño personalizado. ¡Será un placer atenderte!
+          </p>
 
-      <!-- Botones de Redes Sociales -->
-      <div class="row">
-        <div class="col-md-10 mx-auto">
-          <div class="social-buttons">
-            <a href="https://wa.me/5212881409816?text=Hola!%20Me%20gustaría%20cotizar%20un%20producto" target="_blank"
-              class="social-btn whatsapp-btn">
-              <i class="fa fa-whatsapp"></i>
-              WhatsApp
+          <div class="boutique-contact-info-card">
+            <div class="info-item d-flex align-items-center mb-4">
+              <div class="value-icon-wrapper">
+                <i class="fa fa-map-marker value-icon"></i>
+              </div>
+              <div>
+                <h5 class="value-title m-0">Ubicación</h5>
+                <p class="value-desc m-0">Cosamaloapan, Veracruz</p>
+              </div>
+            </div>
+
+            <div class="info-item d-flex align-items-center mb-4">
+              <div class="value-icon-wrapper">
+                <i class="fa fa-phone value-icon"></i>
+              </div>
+              <div>
+                <h5 class="value-title m-0">Teléfono</h5>
+                <p class="value-desc m-0">+52 288 140 9816</p>
+              </div>
+            </div>
+
+            <div class="info-item d-flex align-items-center mb-4">
+              <div class="value-icon-wrapper">
+                <i class="fa fa-clock-o value-icon"></i>
+              </div>
+              <div>
+                <h5 class="value-title m-0">Horario de Atención</h5>
+                <p class="value-desc m-0">Lun - Vie: 8:00 AM - 8:00 PM<br>Dom: 4:00 PM - 8:00 PM</p>
+              </div>
+            </div>
+            
+            <div class="info-item d-flex align-items-center">
+              <div class="value-icon-wrapper">
+                <i class="fa fa-envelope value-icon"></i>
+              </div>
+              <div>
+                <h5 class="value-title m-0">Email</h5>
+                <p class="value-desc m-0">aurachavezfri@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Mega Buttons -->
+        <div class="col-lg-6 pl-lg-5">
+          <div class="boutique-mega-btn-container">
+            <!-- WhatsApp Mega Button -->
+            <a href="https://wa.me/5212881409816?text=Hola!%20Me%20gustaría%20cotizar%20un%20producto" target="_blank" class="boutique-mega-btn whatsapp-mega">
+              <div class="mega-btn-icon">
+                <i class="fa fa-whatsapp"></i>
+              </div>
+              <div class="mega-btn-text">
+                <h3>Cotiza por WhatsApp</h3>
+                <p>Atención rápida y personalizada. ¡Respondemos de inmediato!</p>
+              </div>
+              <i class="fa fa-arrow-right mega-btn-arrow"></i>
             </a>
-            <a href="https://www.facebook.com/profile.php?id=61573250580017" target="_blank"
-              class="social-btn facebook-btn">
-              <i class="fa fa-facebook"></i>
-              Facebook
+
+            <!-- Instagram Mega Button -->
+            <a href="https://www.instagram.com/corazon_de_cooco?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="boutique-mega-btn instagram-mega">
+              <div class="mega-btn-icon">
+                <i class="fa fa-instagram"></i>
+              </div>
+              <div class="mega-btn-text">
+                <h3>Inspírate en Instagram</h3>
+                <p>Mira nuestro portafolio y conoce nuestros últimos diseños.</p>
+              </div>
+              <i class="fa fa-arrow-right mega-btn-arrow"></i>
             </a>
-            <a href="https://www.instagram.com/corazon_de_cooco?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              target="_blank" class="social-btn instagram-btn">
-              <i class="fa fa-instagram"></i>
-              Instagram
-            </a>
-            <a href="mailto:aurachavezfri@outlook.com" class="social-btn email-btn">
-              <i class="fa fa-envelope"></i>
-              Email
+            
+            <!-- Facebook Mega Button -->
+            <a href="https://www.facebook.com/profile.php?id=61573250580017" target="_blank" class="boutique-mega-btn facebook-mega">
+              <div class="mega-btn-icon">
+                <i class="fa fa-facebook"></i>
+              </div>
+              <div class="mega-btn-text">
+                <h3>Síguenos en Facebook</h3>
+                <p>No te pierdas nuestras promociones y novedades semanales.</p>
+              </div>
+              <i class="fa fa-arrow-right mega-btn-arrow"></i>
             </a>
           </div>
         </div>
       </div>
-
-      <!-- Información Adicional -->
-      <div class="row mt-5 pt-4">
-        <div class="col-md-4">
-          <div class="info-box text-center">
-            <div class="icon-wrapper">
-              <i class="fa fa-map-marker"></i>
-            </div>
-            <h5>Ubicación</h5>
-            <p>Cosamaloapan, Veracruz<br>México</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="info-box text-center">
-            <div class="icon-wrapper">
-              <i class="fa fa-phone"></i>
-            </div>
-            <h5>Teléfono</h5>
-            <p>+52 288 140 9816</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="info-box text-center">
-            <div class="icon-wrapper">
-              <i class="fa fa-clock-o"></i>
-            </div>
-            <h5>Horario de Atención</h5>
-            <p>Lunes - Viernes<br>8:00 AM - 8:00 PM<br>Sábado: Cerrado<br>Domingo: 4:00 PM - 8:00 PM</p>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
   <!-- end contact section -->
 
-  <!-- footer section -->
-  <footer class="footer_section">
+  <!-- Footer Oficial Unificado -->
+  <footer class="premium-footer">
     <div class="container">
-      <div class="row justify-content-center">
-
-        <div class="col-md-4 footer-col">
-          <div class="footer_contact">
-            <h4>
-              Contáctanos en..
-            </h4>
-            <div class="contact_link_box">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  Ubicación - Cosamaloapan, Veracruz.
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Llámanos: +52 2881409816
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  aurachavezfri@outlook.com
-                </span>
-              </a>
-            </div>
+      <div class="row pt-5 pb-2">
+        <div class="col-lg-5 col-md-5 col-12 mb-4 mb-md-0 text-center text-md-left">
+          <a href="index.html" class="footer-brand d-inline-flex align-items-center mb-2">
+            <span class="fa-stack navbar-logo-stack mr-2" style="font-size: 1.1rem;">
+              <i class="fa fa-heart fa-stack-2x logo-heart"></i>
+            </span>
+            <span class="footer-brand-title" style="font-family: var(--font-title); font-size: 2.2rem; color: #FFFFFF !important; font-weight: 700;">Corazón de Coco</span>
+          </a>
+          <p class="footer-tagline">
+            Alta repostería internacional y diseños personalizados hechos con el corazón en Cosamaloapan, Veracruz.
+          </p>
+          <div class="footer-social-icons mt-3">
+            <a href="https://www.facebook.com/profile.php?id=61573250580017" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+            <a href="https://wa.me/5212881409816" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/corazon_de_cooco" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
           </div>
         </div>
-
-        <div class="col-md-4 footer-col">
-          <div class="footer_detail">
-            <a href="" class="footer-logo">
-              Corazón de Coco
-            </a>
-            <p>
-              Pasteles y postres artesanales hechos con amor.
-            </p>
-            <div class="footer_social">
-              <a href="https://www.facebook.com/profile.php?id=61573250580017">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a
-                href="https://api.whatsapp.com/send?phone=%2B5212881409816&fbclid=IwY2xjawOnPWVleHRuA2FlbQIxMABicmlkETFZY3lIUlRxS1hMeGdXWU5Ec3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHssEtixjd5iVAWxxys-EcsESbyMvWX2rii_MtvKInAvLHo_wCsoxJeN8HjtS_aem_uVgq52IVgVE_6I8hSvAmIg">
-                <i class="fa fa-whatsapp" aria-hidden="true"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/corazon_de_cooco?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
+        <div class="col-lg-3 col-md-3 col-6 mb-4 mb-md-0 text-left">
+          <h5 class="footer-heading">Navegación</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Rebanadas del Día</a></li>
+            <li><a href="disenar.html">Diseñar Pastel</a></li>
+            <li><a href="product.html">Catálogo Completo</a></li>
+            <li><a href="about.html">Nuestra Historia</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
         </div>
-
+        <div class="col-lg-4 col-md-4 col-6 mb-4 mb-md-0 text-left">
+          <h5 class="footer-heading">Contacto</h5>
+          <ul class="footer-contact-info">
+            <li>
+              <i class="fa fa-map-marker"></i>
+              <span>Cosamaloapan, Ver.</span>
+            </li>
+            <li>
+              <i class="fa fa-phone"></i>
+              <a href="tel:+522881409816">+52 288 140 9816</a>
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i>
+              <a href="mailto:aurachavezfri@gmail.com" class="footer-email-link">aurachavezfri@gmail.com</a>
+            </li>
+          </ul>
+        </div>
       </div>
-
-      <div class="footer-info">
-        <p>
-          &copy; <span id="displayYear"></span> Todos los derechos reservados
-        </p>
+      <div class="footer-bottom text-center">
+        <p class="mb-0" onclick="checkSecretAdminTap()" style="cursor: default; user-select: none;">&copy; <span id="displayYear"></span> Corazón de Coco. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>
   <!-- footer section -->
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/5212881409816?text=Hola!%20Me%20gustaría%20saber%20más%20sobre%20sus%20servicios"
-    target="_blank" class="whatsapp-float">
+  <a href="https://wa.me/5212881409816?text=Hola!%20Me%20gustaría%20más%20información" target="_blank"
+    class="whatsapp-float">
     <i class="fa fa-whatsapp"></i>
-    <span class="whatsapp-float-msg">Escríbenos</span>
+    <span class="whatsapp-float-msg">¡Contáctanos!</span>
   </a>
 
   <!-- jQery -->
@@ -247,11 +296,137 @@
   </script>
   <!-- custom js -->
   <script src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCT1rGXvb_52sjtfFQNidkXbXnLQcSYRlI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
 
+  <!-- CocoBot Widget -->
+  <link href="css/cocobot.css" rel="stylesheet" />
+  <script src="js/cocobot.js"></script>
+
+  <!-- Motor de Rebanadas & Bandeja de Antojos (Fase 2) -->
+  <script src="js/antojos.js"></script>
+
+  <!-- Barra de Opciones Inferior Estilo Rappi (Bottom App Bar) -->
+  <nav class="app-bottom-nav" aria-label="Navegación principal">
+    <a href="index.html" class="app-bottom-nav-item">
+      <div class="nav-icon-wrap"><i class="fa fa-home"></i></div>
+      <span class="nav-label">Inicio</span>
+    </a>
+    <a href="disenar.html" class="app-bottom-nav-item">
+      <div class="nav-icon-wrap"><i class="fa fa-birthday-cake"></i></div>
+      <span class="nav-label">Diseñar</span>
+    </a>
+    <a href="product.html" class="app-bottom-nav-item">
+      <div class="nav-icon-wrap"><i class="fa fa-th-large"></i></div>
+      <span class="nav-label">Catálogo</span>
+    </a>
+    <button type="button" class="app-bottom-nav-item nav-item-bandeja" onclick="abrirModalCajita()" aria-label="Ver Bandeja Dulce">
+      <div class="nav-icon-wrap">
+        <i class="fa fa-shopping-basket"></i>
+        <span class="badge badge-pill badge-danger header-cart-badge d-none">0</span>
+      </div>
+      <span class="nav-label">Bandeja</span>
+    </button>
+    <button type="button" class="app-bottom-nav-item active" onclick="abrirAppDrawer()" aria-label="Abrir Menú Completo">
+      <div class="nav-icon-wrap"><i class="fa fa-bars"></i></div>
+      <span class="nav-label">Menú</span>
+    </button>
+  </nav>
+
+  <!-- App Slide-Out Drawer (Menú Móvil Exclusivo) -->
+  <div id="appDrawerOverlay" class="app-drawer-overlay">
+    <div class="app-slide-drawer">
+      <div class="app-drawer-header">
+        <div class="d-flex align-items-center">
+          <span class="fa-stack navbar-logo-stack mr-2" style="font-size: 0.9rem;">
+            <i class="fa fa-heart fa-stack-2x logo-heart"></i>
+          </span>
+          <span style="font-family: var(--font-title); font-size: 1.8rem; color: #2E4057; font-weight: 700;">Corazón de Coco</span>
+        </div>
+        <button type="button" class="cajita-close-btn" onclick="cerrarAppDrawer()" aria-label="Cerrar Menú">&times;</button>
+      </div>
+
+      <div class="app-drawer-body">
+        <p style="font-size: 0.92rem; color: #666; margin-bottom: 20px;">
+          Alta repostería internacional y diseños personalizados en Cosamaloapan, Veracruz.
+        </p>
+
+        <a href="index.html" class="app-drawer-link-card" onclick="cerrarAppDrawer()">
+          <div class="app-drawer-icon"><i class="fa fa-home"></i></div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Inicio / Rebanadas del Día</div>
+            <div style="font-size: 0.8rem; color: #777;">Porciones individuales para hoy</div>
+          </div>
+        </a>
+
+        <a href="disenar.html" class="app-drawer-link-card" onclick="cerrarAppDrawer()">
+          <div class="app-drawer-icon"><i class="fa fa-magic"></i></div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Diseñar Pastel</div>
+            <div style="font-size: 0.8rem; color: #777;">Cotizador interactivo paso a paso</div>
+          </div>
+        </a>
+
+        <a href="product.html" class="app-drawer-link-card" onclick="cerrarAppDrawer()">
+          <div class="app-drawer-icon"><i class="fa fa-th-large"></i></div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Catálogo Completo</div>
+            <div style="font-size: 0.8rem; color: #777;">Galería de pasteles y postres enteros</div>
+          </div>
+        </a>
+
+        <a href="about.html" class="app-drawer-link-card" onclick="cerrarAppDrawer()">
+          <div class="app-drawer-icon"><i class="fa fa-heart-o"></i></div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Nuestra Historia</div>
+            <div style="font-size: 0.8rem; color: #777;">Misión, visión y pasión por la pastelería</div>
+          </div>
+        </a>
+
+        <a href="contact.html" class="app-drawer-link-card" onclick="cerrarAppDrawer()">
+          <div class="app-drawer-icon"><i class="fa fa-map-marker"></i></div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Ubicación & Contacto</div>
+            <div style="font-size: 0.8rem; color: #777;">Cosamaloapan, Veracruz</div>
+          </div>
+        </a>
+
+        <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid #f0e6e0;">
+          <a href="https://wa.me/5212881409816?text=Hola!%20Me%20gustar%C3%ADa%20hacer%20un%20pedido" target="_blank" class="btn-primary-custom d-flex align-items-center justify-content-center" style="width: 100%; padding: 12px; margin-bottom: 10px; text-decoration: none;">
+            <i class="fa fa-whatsapp mr-2" style="font-size: 1.2rem;"></i> WhatsApp Directo
+          </a>
+          <a href="https://www.instagram.com/corazon_de_cooco" target="_blank" class="btn-outline-custom d-flex align-items-center justify-content-center" style="width: 100%; padding: 10px; text-decoration: none; font-size: 0.9rem;">
+            <i class="fa fa-instagram mr-2"></i> @corazon_de_cooco
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Control del Slide Drawer lateral
+    window.abrirAppDrawer = function() {
+      const drawer = document.getElementById("appDrawerOverlay");
+      if (drawer) drawer.classList.add("open");
+      document.body.style.overflow = "hidden";
+    };
+
+    window.cerrarAppDrawer = function() {
+      const drawer = document.getElementById("appDrawerOverlay");
+      if (drawer) drawer.classList.remove("open");
+      document.body.style.overflow = "";
+    };
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const drawer = document.getElementById("appDrawerOverlay");
+      if (drawer) {
+        drawer.addEventListener("click", function(e) {
+          if (e.target === drawer) cerrarAppDrawer();
+        });
+      }
+      
+      const yearSpan = document.getElementById("displayYear");
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    });
+  </script>
 </body>
 
 </html>

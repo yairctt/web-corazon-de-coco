@@ -13,7 +13,8 @@
         {
             "nombre": "Pastel Dragon Ball",
             "imagen": "images/pastel_dragon_ball.png",
-            "descripcion": "Diseño temático de Dragon Ball, bizcocho de vainilla humedecido en tres leches."
+            "descripcion": "Diseño temático de Dragon Ball, bizcocho de vainilla humedecido en tres leches.",
+            "etiqueta": "Popular"
         },
         {
             "nombre": "Pastel con Frutos",
@@ -23,7 +24,7 @@
         {
             "nombre": "Pastel Where is Chicky",
             "imagen": "images/pastel_globos.png",
-            "descripcion": "Pastel doble altura de red velvet con decoraciones artesanales."
+            "descripcion": "Pastel doble altura de red velvet con acabados profesionales de alta repostería."
         },
         {
             "nombre": "Pastel Los Picapiedra",
@@ -78,7 +79,8 @@
         {
             "nombre": "Pastel Flork",
             "imagen": "images/pastel_flork.png",
-            "descripcion": "Decorado con el divertido personaje Flork y frases personalizadas de lettering."
+            "descripcion": "Decorado con el divertido personaje Flork y frases personalizadas de lettering.",
+            "etiqueta": "Favorito"
         },
         {
             "nombre": "Pastel con Rosetones",
@@ -243,7 +245,7 @@
         {
             "nombre": "Pastel Stitch",
             "imagen": "images/pastel_stich.png",
-            "descripcion": "Cubierto con buttercream, decoración en forma de corazón y detalles artesanales."
+            "descripcion": "Cubierto con buttercream, decoración en forma de corazón y finos detalles de alta repostería."
         },
         {
             "nombre": "Pastel tipo Matilda",
@@ -314,12 +316,13 @@
         {
             "nombre": "Pastel de zanahoria",
             "imagen": "images/pastel_de_zanahoria.png",
-            "descripcion": "Receta casera con especias, nuez y una suave cobertura de crema de queso."
+            "descripcion": "Receta tradicional gourmet con especias, nuez y una suave cobertura de crema de queso."
         },
         {
             "nombre": "Carlota de limón",
             "imagen": "images/postres_enteros.png",
-            "descripcion": "Postre frío clásico con capas de galleta y una crema cítrica refrescante."
+            "descripcion": "Postre frío clásico con capas de galleta y una crema cítrica refrescante.",
+            "etiqueta": "Clásico"
         },
         {
             "nombre": "Pay de queso",
@@ -339,7 +342,7 @@
         {
             "nombre": "Chocoflan",
             "imagen": "images/chocofl.png",
-            "descripcion": "Delicioso Chocoflan casero artesanal."
+            "descripcion": "Exquisito Chocoflan napolitano de alta repostería."
         },
         {
             "nombre": "Cheesecake Helado de oreo",
@@ -391,7 +394,7 @@
         {
             "nombre": "Fresas con Mazapán",
             "imagen": "images/fresas_mazapan.png",
-            "descripcion": "Una combinación única de fresas cubiertas con chocolate y una lluvia de mazapán artesanal."
+            "descripcion": "Una combinación única de fresas cubiertas con chocolate y una lluvia de mazapán gourmet."
         },
         {
             "nombre": "Fresas Personalizadas",

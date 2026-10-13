@@ -1,63 +1,181 @@
-@media (max-width: 1300px) {}
-
-@media (max-width: 1120px) {}
-
-@media (max-width: 992px) {
-  .hero_area {
-    min-height: auto;
-  }
-
-  .custom_nav-container .navbar-nav {
-    padding-top: 15px;
-    align-items: center;
-  }
-
-
-  .custom_nav-container .navbar-nav .nav-item .nav-link {
-    padding: 5px 25px;
-    margin: 5px 0;
-  }
-
-  .slider_section .carousel-indicators {
-    margin-top: 45px;
-  }
-
-}
-
-@media (max-width: 767px) {
-
-  .slider_section .detail-box,
-  .about_section .detail-box {
-    margin-bottom: 45px;
-  }
-
-  .about_section .row {
-    flex-direction: column-reverse;
-  }
-}
-
-@media (max-width: 576px) {}
-
-@media (max-width: 480px) {}
-
-@media (max-width: 420px) {}
-
-@media (max-width: 376px) {
-  .slider_section .detail-box h1 {
-    font-size: 3rem;
-  }
-}
-
 @media (min-width: 1200px) {
   .container {
     max-width: 1170px;
   }
 }
 
+@media (max-width: 992px) {
+  /* Navbar adjustments */
+  .custom_nav-container .navbar-nav {
+    padding-top: 15px;
+    align-items: center;
+  }
+  .custom_nav-container .navbar-nav .nav-item .nav-link {
+    padding: 5px 25px;
+    margin: 5px 0;
+  }
+  
+  /* Hero section scaling */
+  .new-hero-content h1 {
+    font-size: 4rem;
+  }
+  
+  /* Stats Bar stacking */
+  .premium-stats-bar .col-lg-3 {
+    margin-bottom: 30px;
+  }
+  
+  /* Process cards margin */
+  .boutique-process-card {
+    margin-bottom: 30px;
+  }
+  
+  /* Footer responsivo */
+  .premium-footer .footer-tagline {
+    max-width: 100%;
+  }
+}
 
-@media (min-width:576px) and (max-width:991px) {
-  .rent_solution_container .col-md-4.col-sm-6 {
-    float: left;
-    width: 50%;
+@media (max-width: 767px) {
+  /* Top Bar & Header fixes */
+  .top-bar .container {
+    justify-content: center !important;
+  }
+  .top-contact {
+    display: none !important;
+  }
+  .navbar-brand span {
+    font-size: 26px;
+    white-space: nowrap;
+  }
+  .navbar-logo-stack {
+    font-size: 1.3rem !important; /* Scale heart logo down */
+    margin-right: 5px !important;
+  }
+  .custom_nav-container {
+    justify-content: space-between;
+  }
+  .navbar-brand {
+    margin-right: auto;
+  }
+  .navbar-toggler {
+    margin-left: 15px;
+  }
+  
+  /* Make toggler visible on white background */
+  .custom_nav-container .navbar-toggler span,
+  .custom_nav-container .navbar-toggler span::before,
+  .custom_nav-container .navbar-toggler span::after {
+    background-color: var(--color-dark) !important;
+  }
+  
+  /* Ensure menu takes full width when expanded */
+  .navbar-collapse {
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  /* Fix Hero */
+  .new-hero-section {
+    padding: 120px 15px 80px 15px;
+    min-height: 70vh;
+  }
+  .new-hero-content h1 {
+    font-size: 3rem;
+  }
+  .new-hero-content p {
+    font-size: 1.15rem;
+  }
+  .new-hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .new-hero-buttons .boutique-btn {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+    margin-right: 0 !important;
+  }
+
+  /* About Logo scaling */
+  .about-big-logo {
+    padding: 10px;
+  }
+  .about-logo-stack {
+    font-size: 2.5rem;
+  }
+  .about-logo-text {
+    font-size: 2.2rem;
+    white-space: normal; /* Allow wrap if necessary */
+    line-height: 1.1;
+  }
+  .about-boutique-title {
+    font-size: 3.2rem;
+  }
+
+  /* Stats Bar */
+  .premium-stats-bar {
+    padding: 30px 15px;
+    margin-top: -30px;
+  }
+  .premium-stats-bar .col-6 {
+    margin-bottom: 30px;
+  }
+
+  /* Favoritos / Boutique Items */
+  .boutique-item-title {
+    font-size: 1.8rem;
+  }
+  .boutique-item {
+    margin-bottom: 40px;
+  }
+
+  /* Menú de Pasteles */
+  .premium-menu-card {
+    padding: 30px 20px;
+    margin-bottom: 30px;
+  }
+  .menu-card-title {
+    font-size: 2rem;
+  }
+
+  /* Notice Box */
+  .premium-notice-box {
+    padding: 25px;
+  }
+  .premium-notice-box .col-md-6 {
+    margin-bottom: 20px;
+  }
+  
+  /* Process */
+  .boutique-process-card {
+    padding: 25px 20px;
+  }
+
+  /* Contact Section */
+  .boutique-contact-section h2.boutique-title {
+    font-size: 3rem !important;
+  }
+  .boutique-pill-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* General Tweak */
+  .about_section .row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .new-hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .about-boutique-title {
+    font-size: 2.8rem;
+  }
+  .about-logo-text {
+    font-size: 1.8rem;
   }
 }
